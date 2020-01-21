@@ -29,6 +29,12 @@
     <script src="js/toast_script.js"></script>
     <script src="js/toastr.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <!--<script type="text/javascript">
+        history.pushState(null, null, location.href);
+        history.back();
+        history.forward();
+        window.onpopstate = function () { history.go(1); };
+    </script>-->
     
     <title>contenido de convenios</title>
   </head>
@@ -78,11 +84,11 @@
       <div class="vertical-tab"> <!------COMIENZA VERTICAL-TAB------->  
         <ul class="nav nav-tab" role="tablist"> <!--COMIENZA NAV NAV-TAB-->
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#pag5" role="tab" >Añadir administradores</a>
+            <a class="nav-link active" data-toggle="tab" href="#pag5" role="tab" >Administrador</a>
           </li>
   
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#pag6" role="tab" >Por Tipo</a>
+            <a class="nav-link" data-toggle="tab" href="#pag6" role="tab" >Contenidos</a>
           </li>
   
           <li class="nav-item">
@@ -113,7 +119,7 @@
                     <a class="nav-link" data-toggle="tab" href="#pag3" role="tab">Añadir convenios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#pag4" role="tab">Base de datos</a>
+                    <a class="nav-link" data-toggle="tab" href="#pag4" role="tab">Reportes</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#pag0" role="tab">Perfil</a>
@@ -128,7 +134,7 @@
                   <div class="tab-pane active" id="pag1" role="tabpanel"> <!--COMIENZA TAB-PANE ESTUDIANTES-->
                     <div class="sv-tab-panel anadir-est ">
                     <!--AÑADIR ESTUDIANTES-->
-                    <div class="card border-dark" id="formularioEst" style="width: 45rem;"> <!--COMIENZA CARD BORDER-DARK-->
+                    <div class="card border-dark" id="formularioEst" style="width: 45rem; margin-top: 40px; margin-left: 40px;"> <!--COMIENZA CARD BORDER-DARK-->
                       <div class="card-body"> <!--COMIENZA CARD-BODY-->
                         Añadir estudiantes/docentes:
                         <div class="texto-introducir-codigo">
@@ -159,15 +165,15 @@
                           
                           <a href="#popupAlumno" type="submit" class="btn boton-circle" role="button" style="color: white; background: black; border-radius: 40px; font-size: large; margin-left: 280px; margin-top: 10px;">Guardar</a>
                           <div id="popupAlumno" class="overlay"> <!--COMIENZA POPUPALUMNO-->
-                            <div class="popup"> <!--COMIENZA POPUP-->
-                              <div class="title-popup">Añadir Alumno:</div>
+                            <div class="popup" style="margin-top:100px;"> <!--COMIENZA POPUP-->
+                              <div class="title-popup">Añadir Alumno/Docente:</div>
                               <a class="close" href="#">×</a>
                               <div class="content"> <!--COMIENZA CONTENT-->
-                                ¿Estas seguro que quieres añadir a este alumno?
+                                ¿Estas seguro que quieres añadir a este alumno/docente?
                                 <ul >
                                   <div class="modal-footer">
-                                    <button type="submit" name="submit_anadir_alumno" class="btn boton-info" style="background: green; color: white;">Guardar</button>
-                                    <a href="#formularioEst" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
+                                    <button type="submit" name="submit_anadir_alumno" class="btn boton-info" style="background: #FE4164; color: white;">Guardar</button>
+                                    <a href="#formularioEst" type="button" class="btn btn-secondary" data-dismiss="modal" style="background: #424242; color: white;">Cancelar</a>
                                   </div>
                                 </ul>
                               </div> <!--ACABA CONTENT-->
@@ -184,7 +190,7 @@
                   <!------------------   TAB 2 Añadir administradores ---------------->
                   <div class="tab-pane" id="pag2" role="tabpanel"> <!--COMIENZA TAB-PANE ADMINISTRADORES-->
                     <div class="sv-tab-panel anadir-est">
-                      <div class="card border-dark" style="width: 55rem;"> <!--COMIENZA CARD BORDER-DARK-->
+                      <div class="card border-dark" style="width: 55rem; margin-top: 40px;"> <!--COMIENZA CARD BORDER-DARK-->
                         <div class="card-body">Añadir administradores:</div>
                         <div id="formulario-Admin"> <!--COMIENZA FORMULARIO-ADMIN-->
                           <form class="form-inline" action="anadirAdmi.php" role="form"  method="post"> <!--COMIENZA FORM-->
@@ -372,7 +378,7 @@
                                 <!--Código-->
                                 <label  class="col-6 col-form-label">Código:</label>
                                 <div class="col-6">
-                                  <input type="text" name="codigoAdminist" id="codigoAdministrador" class="form-control" value="<?php echo $row2['codigo_admi'] ?>" style="margin-bottom: 10px;" required>
+                                  <input type="text" name="codigoAdminist" id="codigoAdministrador" class="form-control" value="<?php echo $row2['codigo_admi'] ?>" style="margin-bottom: 10px;" required readonly>
                                 </div>
                                 <!--Campus-->
                                 <label  class="col-6 col-form-label">Campus:</label>
@@ -446,8 +452,8 @@
                 <!--HASTA AQUI-->    
           </div> <!--ACABA TAB-PANE PAG5-->
               
-          <!--TAB 6 POR TIPO-->
-          <div class="tab-pane" id="pag6" role="tabpanel"> <!--COMIENZA TAB-PANE POR TIPO-->
+          <!--TAB 6 CONTENIDOS-->
+          <div class="tab-pane" id="pag6" role="tabpanel"> <!--COMIENZA TAB-PANE CONTENIDOS-->
             <div class="sv-tab-panel titulo-por-universidad">
             <?php
       // add dbconnection
@@ -460,14 +466,14 @@
 
     <!--PARA PHP-->
       <h3>TODOS LOS CONTENIDOS</h3>
-      <div class="row">
-        <div class="col-sm-10">
-          <table class="table">
-            <thead>
+      <div class="row" style="margin-left:35px;">
+        <div class="col-sm-11">
+          <table class="table table-dark table-striped" style="font-size: 5mm;">
+            <thead >
               <tr>
-                <th>UNIVERSIDAD O INSTITUTO</th>
-                <th>PAIS</th>
-                <th>ACCIONES</th>
+                <th style="color: #FE4164;">UNIVERSIDAD O INSTITUTO</th>
+                <th style="color: #FE4164;">PAIS</th>
+                <th style="color: #FE4164;">ACCIONES</th>
               </tr>
             </thead>
             <tbody>

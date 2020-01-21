@@ -20,17 +20,16 @@
     <!--CSS-->
     <link href="css/custom.css" rel="stylesheet" >
     <!--JS-->
-    <script >
-        function deshabilitaRetroceso(){
-        window.location.hash="no-back-button";
-        window.location.hash="Again-No-back-button" //chrome
-        window.onhashchange=function(){window.location.hash="no-back-button";}
-    }
+    <script type="text/javascript">
+        history.pushState(null, null, location.href);
+        history.back();
+        history.forward();
+        window.onpopstate = function () { history.go(1); };
     </script>
     <script language="JavaScript" type="text/javascript" src="js/custom.js"></script>
     <title>contenido de convenios</title>
   </head>
-  <body onload="deshabilitaRetroceso()">
+  <body  onunload="">
 
     <div class="container"><!---------------CONTAINER PARA CAROUSEL----------->
       <!--SLIDER CAROUSEL-->
