@@ -1,0 +1,72 @@
+h4 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+html,body{
+    background-image: url('https://i.ibb.co/84fX7Yc/log.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.card { 
+    background-color: rgb(255, 0, 128); opacity: 0.6; 
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+
+}
+.card-header {
+    color:whitesmoke;
+}
+.bienvenido {
+    color: blanchedalmond;
+    left: 370px;
+    top: 600.0px;
+    
+}
+
+.icon-administrador-css span{
+    width: 60px;
+    height: 60px;
+    border-radius: 65px;
+    background-color: #7c6c35;
+    color: #fff;
+    border:0 !important;
+    position: absolute;
+    left: 405px;
+    top: 190.0px;
+}
+
+.icon-password-css span{
+    width: 60px;
+    height: 60px;
+    border-radius: 65px;
+    background-color: #7c6c35;
+    color: #fff;
+    border:0 !important;
+    position: absolute;
+    left: 410px;
+    top: 350.0px;
+}
+
+.boton-circle{
+    color: white;
+    background: black;
+    border-radius: 40px;
+    border-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: xx-large;
+    position: absolute;
+    left: 610px;
+    top: 460.0px;
+}

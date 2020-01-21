@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--ALL-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js" data-semver="3.0.0" data-require="jquery"></script>
+    <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
+    
+    <!--FONT AWESOME ICONS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS-->
+    <link href="css/admin.css" rel="stylesheet" >
+    <link href="css/toastr.css" rel="stylesheet" >
+    <!--JS-->
+    <script src="js/toast_script.js"></script>
+    <script src="js/toastr.js"></script>
+
+    <title>contenido de convenios</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="text-center">
+        <img src="img/title.png" alt="title">
+    </div>
+  </div>
+
+  <div class="pos-f-t">    
+              <div class="vertical-tab">
+                <ul class="nav nav-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag5" role="tab" >Añadir administradores</a>
+                  </li>
+          
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag6" role="tab" >Por Tipo</a>
+                  </li>
+          
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag7" role="tab" >Por Universidad/institución</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag8" role="tab" >Por País</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag9" role="tab" >Por Continente</a>
+                  </li>
+          
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane" id="pag5" role="tabpanel">
+                    <div class="sv-tab-panel">
+                      <!--AQUI VA-->
+                      <div class="vertical-tabs">
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#pag1" role="tab">Añadir estudiantes / docentes</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#pag2" role="tab">Añadir administradores</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#pag3" role="tab">Añadir vistas</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#pag4" role="tab">Base de datos</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#pag0" role="tab">Perfil</a>
+                          </li>
+                        </ul>
+                        <!--BAR VERTICAL-->
+                        <div class="tab-content">
+                          <!----------------   TAB 1  ------------------------>
+                          <div class="tab-pane active" id="pag1" role="tabpanel">
+                            <div class="sv-tab-panel anadir-est">
+                              <!--AÑADIR ESTUDIANTES / DOCENTES-->
+                            <!--AÑADIR ESTUDIANTES-->
+                            <div class="card border-dark" style="width: 45rem;"> <!--COMIENZA CARD BORDER-DARK-->
+                              <div class="card-body"> <!--COMIENZA CARD-BODY-->
+                                Añadir estudiantes:
+                                <div class="texto-introducir-codigo">
+                                  Introduce el código que quieres añadir estudiantes:
+                                </div>
+                                <div class="input-codigo"> <!--COMIENZA INPUT-CODIGO-->
+                                  <div class="form-inline"> <!--COMIENZA FORM-INLINE-->
+                                    <label class="col-2 col-form-label">Código:</label>
+                                    <div class="col-10">
+                                      <input type="text" name="codigo" maxlength="5" id="codigo" class="form-control input-lg" title="solo se permite numeros(maximo: 5 numeros)" placeholder="ingrese codigo" required pattern="[0-9]+" required/>
+                                    </div> 
+                                  </div> <!--ACABA FORM-INLINE-->
+                                </div> <!--ACABA INPUT-CODIGO-->
+
+                                <a href="#" class="btn boton-circle-guarda-est-doc" role="button" aria-pressed="true">Guardar</a>
+                              </div> <!--ACABA CARD-BODY-->
+                            </div> <!--ACABA CARD BORDER-DARK-->
+                          </br>
+                            <!--AÑADIR DOCENTES-->
+                            <div class="card border-dark" style="width: 45rem;">
+                              <div class="card-body">
+                                Añadir docentes:
+                                <div class="texto-introducir-codigo">
+                                  Introduce el código que quieres añadir docentes:
+                                </div>
+                                <div class="input-codigo">
+                                  <div class="form-inline">
+                                    <label for="example-number-input" class="col-2 col-form-label">Código:</label>
+                                    <div class="col-10">
+                                      <input type="number" name="codigo" maxlength="5" id="codigo" class="form-control input-lg" placeholder="ingrese codigo"/>
+                                    </div> 
+                                  </div>
+                                </div>
+                                
+                                <a href="#" class="btn boton-circle-guarda-est-doc" role="button" aria-pressed="true">Guardar</a>
+                              </div>
+                            </div>
+
+                            </div>
+                          </div>
+                          <!------------------   TAB 2  ---------------->
+                          <div class="tab-pane" id="pag2" role="tabpanel">
+                            <div class="sv-tab-panel anadir-est">
+                              <!--Añadir administradores-->
+                        <div class="tab-pane" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                          
+                            <div class="card border-dark" style="width: 55rem;">
+                              <div class="card-body">
+                              Añadir administradores:
+                            </div>
+                          <div  id="formulario-Admin">
+                            
+                              <form class="form-inline">
+                                <div class="input-codigo">
+                                <div class="form-group">
+                                <!--NOMBRE DEL ADMINISTRADOR-->
+                                
+                                <label for="example-number-input" class="col-6 col-form-label">Nombre del admnistrador:</label>
+                                <div class="col-6">
+                                  <input type="text" name="admnistrador"  id="nombre_administrador" class="input-group-lg" placeholder="Ej. Mariana"/>
+                                </div> 
+                              
+                                <!--CAMPUS-->
+                                
+                                <label for="exampleSelect1" class="col-6 col-form-label text-left">Campus:</label>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <select class="selectpicker">
+                                            <option title="LaPaz">Fernando Illanes de la Riva, La Paz</option>
+                                            <option title="Cochabamba">Julio León Prado, Cochabamba</option>
+                                            <option title="SantaCruz">Campus Santa Cruz</option>
+                                          </select>
+                                        </div>
+                                     </div>
+                                     
+                                <!--CODIGO-->
+                                <label for="example-number-input" class="col-6 col-form-label">Código:</label>
+                                <div class="col-6">
+                                  <input type="number" name="codigoAdmin" id="codigoAdmin" class="input-group-lg" placeholder="Ej. 55555"/>
+                                </div> 
+                                <!--CONTRASEÑA-->
+                                <label for="example-text-input" class="col-6 col-form-label">Contraseña:</label>
+                                <div class="col-6">
+                                  <input type="password" name="contraseñaAdmin"id="contraseñaAdmin" class="input-lg"placeholder="Ej. 12345678">
+                                </div>
+                                
+                                <!--CONFIRMAR CONTRASEÑA-->
+                                <label for="example-text-input" class="col-6 col-form-label">Confirmar contraseña:</label>
+                                <div class="col-6">
+                                  <input type="password" name="confirmarContraseñaAdmin"id="confirmarContraseñaAdmin" class="input-lg"placeholder="Ej. 12345678">
+                                </div>
+                                
+                              </div>
+                              </form>
+                              
+                              <a href="#popupAdmin" type="button" style="margin-left: 210px;" class="btn boton-anadir-admin" role="button" aria-pressed="true">Guardar</a>
+                              <div id="popupAdmin" class="overlay">
+                                <div class="popup">
+                                <div class="title-popup">Añadir Administrador:</div>
+                                <a class="close" href="#">×</a>
+                                <div class="content">
+                                  
+                                    ¿Estas seguro que quieres añadir a este Administrador?
+                                  
+                                <ul >
+                                  <div class="modal-footer">
+                                    <a href="#" type="button" class="btn btn-primary" data-dismiss="modal">Guardar</a>
+                                    
+                                    <a href="#formularioAdmin" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
+                                  </div>
+                                </ul>
+                                
+                                </div>
+                                
+                              </div>
+                                
+                              </div>
+                              
+                            </div>
+                            </div>
+                          </div>
+                      </div>
+                            </div>
+                          </div>
+                          <!-----------------  TAB 3  ----------------------->
+                          <div class="tab-pane" id="pag3" role="tabpanel">
+                            <div class="sv-tab-panel anadir-est">
+                              <!--Añadir convenios-->
+                              <div class="card border-dark" style="width: 52rem;"> <!--COMIENZA CARD-BORDER-DARK-->
+                                <div class="card-body"> <!--COMIENZA CARD-BODY-->
+                                  Añadir Vistas:
+                                  <form class="form-inline">
+                                    <div class="input-de-anadir"> <!--COMIENZA INPUT-DE-ANADIR-->
+                                      <div class="form-group"> <!--COMIENZA FORM-GROUP-->
+                                        <!--NOMBRE DEL INSTITUTO O UNIVERSIDAD-->
+                                        <label for="example-number-input" class="col-6 col-form-label">Nombre del Instituto o Universidad:</label>
+                                        <div class="col-6">
+                                          <input type="text" name="Universidad"  id="universidad" class="form-control input-lg" placeholder="Universidad EAFIT"/>
+                                        </div> 
+                                        <!--PAIS-->
+                                        <label for="example-number-input" class="col-6 col-form-label">País:</label>
+                                        <div class="col-6">
+                                          <input type="text" name="pais" id="pais" class="form-control input-lg" placeholder="Colombia"/>
+                                        </div> 
+                                        <!--FECHA DE FIRMA DE CONVENIO (DATE)-->
+                                        <label for="example-date-input" class="col-6 col-form-label">Fecha de firma de convenio:</label>
+                                        <div class="col-6">
+                                          <input class="form-control input-lg" type="date" value="2019-11-27" id="date-input">
+                                        </div>
+                                        <!--QUE ABARCA-->
+                                        <label class="col-6 col-form-label text-left">Que abarca:</label>
+                                        <div class="col-md-6">
+                                          <a class="btn dropdown-toggle mr-4"  data-toggle="dropdown"
+                                          role="button" aria-haspopup="true" aria-expanded="false">Que campos abarca</a>           
+                                          <div class="dropdown-menu">
+                                            <!--Pasantia-->
+                                            <a class="dropdown-item" href="#">
+                                              <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                                <label class="custom-control-label" >Pasantia</label>
+                                              </div>
+                                            </a>
+                                            <!--Trabajo Social-->
+                                            <a class="dropdown-item" href="#">
+                                              <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                                <label class="custom-control-label" >Trabajo Social</label>
+                                              </div>
+                                            </a>
+                                          </div>
+                                        </div>                                          
+                                        <!--Fecha de firma de convenio-->
+                                        <label class="col-6 col-form-label">Fecha de firma de convenio:</label>
+                                        <div class="col-6">
+                                          <input class="form-control" type="date" value="2019-12-02" id="fecha-firma">
+                                        </div> 
+                                        <!--Fecha de vencimiento-->
+                                        <label for="example-date-input" class="col-6 col-form-label">Fecha de vencimiento:</label>
+                                        <div class="col-6">
+                                          <input class="form-control" type="date" value="2019-12-02" id="fecha-vencimiento">
+                                        </div>
+                                        <!--Descripcion-->
+                                        <label class="col-6 col-form-label">Descripción:</label>
+                                        <div class="col-6">
+                                          <div class="form-group">
+                                            <textarea style="padding-left: 100px;" class="form-control" rows="5" placeholder="- Costo de vida - condiciones - carreras involucradas"></textarea>
+                                          </div>
+                                        </div>
+                                        <!--Enlaces de interes-->
+                                        <label style="padding-top: 40px; padding-bottom: 40px;" class="col-6 col-form-label">Enlaces de interés:</label>
+                                        <div class="col-6">
+                                          <div class="form-group">
+                                            <textarea style="padding-left: 70px;" class="form-control" rows="3" placeholder=" www.pagina.com"></textarea>
+                                          </div>
+                                        </div>
+                                        <!---->
+                                      </div> <!--ACABA FORM-GROUP-->
+                                    </div> <!--ACABA INPUT-DE-ANADIR-->
+                                    <a href="#" type="button" style="margin-left: 210px;" class="btn boton-anadir-admin" role="button" aria-pressed="true">Guardar</a>
+                                  </form>
+                                </div> <!--ACABA CARD-BODY-->
+                              </div> <!--ACABA CARD-BORDER-DARK-->
+                            </div>
+                          </div>
+                          <!----------------  TAB 4  ----------------->
+                          <div class="tab-pane" id="pag4" role="tabpanel">
+                            <div class="sv-tab-panel anadir-est">
+                              <!--BASE DE DATOS-->
+                              <!--REPORTE ESTUDIANTES-->
+                            <div class="card border-dark" style="width: 45rem;">
+                              <div class="card-body">
+                                Reporte de estudiantes:
+                                
+                                <div class="input-codigo">
+                                  <div class="form-inline">
+                                    <!--DESDE QUE FECHA-->
+                                    <label for="example-date-input" class="col-6 col-form-label">Desde que fecha:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" type="date" value="2020-01-10" id="date-input">
+                                    </div>
+                                    <!--HASTA QUE FECHA-->
+                                    <label for="example-date-input" class="col-6 col-form-label">Hasta que fecha:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" type="date" value="2020-01-10" id="date-input">
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <a href="#" type="button" style="margin-left: 300px;" class="btn boton-anadir-admin" role="button" aria-pressed="true">Generar</a>
+                              </div>
+                            </div>
+                          </br>
+                            <!--REPORTE DOCENTES-->
+                            <div class="card border-dark" style="width: 45rem;">
+                              <div class="card-body">
+                                Reporte de docentes:
+                                
+                                <div class="input-codigo">
+                                  <div class="form-inline">
+                                    <!--DESDE QUE FECHA-->
+                                    <label for="example-date-input" class="col-6 col-form-label">Desde que fecha:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" type="date" value="2020-01-10" id="date-input">
+                                    </div>
+                                    <!--HASTA QUE FECHA-->
+                                    <label for="example-date-input" class="col-6 col-form-label">Hasta que fecha:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" type="date" value="2020-01-10" id="date-input">
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <a href="#" type="button" style="margin-left: 300px;" class="btn boton-anadir-admin" role="button" aria-pressed="true">Generar</a>
+                              </div>
+                            </div>
+                        <!--Hasta aqui es lo de TAB4-->
+                       
+                          </div>
+                        </div>
+                         <!------------------TAB 0----------------------->
+                       <div class="tab-pane" id="pag0" role="tabpanel">
+                        <div class="sv-tab-panel anadir-est">
+                        <!--PERFIL-->
+                        <div class="card border-dark" style="width: 55rem;">
+                          <div class="card-body">
+                            Mi Perfil:
+                            <div class="input-codigo">
+                              <div class="form-inline">
+                                <!--NOMBRE DEL ADMINISTRADOR-->
+                                <label  class="col-6 col-form-label">Nombre del administrador:</label>
+                                <div class="col-6">
+                                  <input type="text" class="input-group-lg" placeholder="nombre"/>
+                                </div>
+                                <!--Campus-->
+                                <label  class="col-6 col-form-label">Campus:</label>
+                                <div class="col-6">
+                                  <input type="text" class="input-group-lg" placeholder="Campus La Paz"/>
+                                </div>
+                                <!--Código-->
+                                <label  class="col-6 col-form-label">Código:</label>
+                                <div class="col-6">
+                                  <input type="text" class="input-group-lg" placeholder="11111"/>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </br>
+                        <!--ACTUALIZAR DATOS-->
+                        <div class="card border-dark" style="width: 55rem;">
+                          <div class="card-body">
+                            Actualizar datos:
+                            <div class="input-codigo">
+                              <div class="form-inline">
+                                <!--NOMBRE DEL ADMINISTRADOR-->
+                                <label  class="col-6 col-form-label">Nombre del administrador:</label>
+                                <div class="col-6">
+                                  <input type="text" class="input-group-lg" placeholder="nombre"/>
+                                </div>
+                                 <!--CAMPUS-->
+                                 <label for="exampleSelect1" class="col-6 col-form-label text-left">Campus:</label>
+                                 <div class="col-md-6">
+                                     <div class="form-group">
+                                       <select class="selectpicker">
+                                         <option title="LaPaz">Fernando Illanes de la Riva, La Paz</option>
+                                         <option title="Cochabamba">Julio León Prado, Cochabamba</option>
+                                         <option title="SantaCruz">Campus Santa Cruz</option>
+                                       </select>
+                                     </div>
+                                  </div>
+
+                                  <!--CONTRASEÑA-->
+                                  <label for="example-text-input" class="col-6 col-form-label">Contraseña:</label>
+                                  <div class="col-6">
+                                    <input type="password" name="contraseñaAdmin"id="contraseñaAdmin" class="input-lg"placeholder="Ej. 12345678">
+                                  </div>
+
+                                  <!--CONFIRMAR CONTRASEÑA-->
+                                  <label for="example-text-input" class="col-6 col-form-label">Confirmar contraseña:</label>
+                                  <div class="col-6">
+                                    <input type="password" name="contraseñaAdmin"id="contraseñaAdmin" class="input-lg"placeholder="Ej. 12345678">
+                                  </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        </div>
+                      </div>
+                      <!--cerrando perfil-->
+                      </div>
+                      
+                        <!--HASTA AQUI-->    
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <!--POR TIPO-->
+                  <div class="tab-pane" id="pag6" role="tabpanel">
+                    <div class="sv-tab-panel titulo-por-universidad">
+                      <h3>POR TIPO</h3>
+                      <p>CONTEUDO 4</p>
+                    </div>
+                  </div>
+                  
+                  <!--POR UNIVERSIDAD / INSTITUCION -->
+                  <div class="tab-pane" id="pag7" role="tabpanel">
+                    <div class="sv-tab-panel">
+                      <div class="titulo-por-universidad">Búsqueda A-Z</div>
+                      <!--LINKBAR-->
+                      <div class="posicion-letras-a-z">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-xs-12 ">
+                              <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                  <a class="nav-item nav-link active" id="nav-letter-a" data-toggle="tab" href="#nav-A" role="tab" aria-selected="true">A</a>
+                                  <a class="nav-item nav-link" id="nav-letter-b" data-toggle="tab" href="#nav-B" role="tab" aria-selected="false">B</a>
+                                  <a class="nav-item nav-link" id="nav-letter-c" data-toggle="tab" href="#nav-C" role="tab" aria-selected="false">C</a>
+                                  <a class="nav-item nav-link" id="nav-letter-d" data-toggle="tab" href="#nav-D" role="tab" aria-selected="false">D</a>
+                                  <a class="nav-item nav-link" id="nav-letter-e" data-toggle="tab" href="#nav-E" role="tab" aria-selected="false">E</a>
+                                  <a class="nav-item nav-link" id="nav-letter-f" data-toggle="tab" href="#nav-F" role="tab" aria-selected="false">F</a>
+                                  <a class="nav-item nav-link" id="nav-letter-g" data-toggle="tab" href="#nav-G" role="tab" aria-selected="false">G</a>
+                                  <a class="nav-item nav-link" id="nav-letter-h" data-toggle="tab" href="#nav-H" role="tab" aria-selected="false">H</a>
+                                  <a class="nav-item nav-link" id="nav-letter-i" data-toggle="tab" href="#nav-I" role="tab" aria-selected="false">I</a>
+                                  <a class="nav-item nav-link" id="nav-letter-j" data-toggle="tab" href="#nav-J" role="tab" aria-selected="false">J</a>
+                                  <a class="nav-item nav-link" id="nav-letter-k" data-toggle="tab" href="#nav-K" role="tab" aria-selected="false">K</a>
+                                  <a class="nav-item nav-link" id="nav-letter-l" data-toggle="tab" href="#nav-L" role="tab" aria-selected="false">L</a>
+                                  <a class="nav-item nav-link" id="nav-letter-m" data-toggle="tab" href="#nav-M" role="tab" aria-selected="false">M</a>
+                                  <a class="nav-item nav-link" id="nav-letter-n" data-toggle="tab" href="#nav-N" role="tab" aria-selected="false">N</a>
+                                  <a class="nav-item nav-link" id="nav-letter-o" data-toggle="tab" href="#nav-O" role="tab" aria-selected="false">O</a>
+                                  <a class="nav-item nav-link" id="nav-letter-p" data-toggle="tab" href="#nav-P" role="tab" aria-selected="false">P</a>
+                                  <a class="nav-item nav-link" id="nav-letter-q" data-toggle="tab" href="#nav-Q" role="tab" aria-selected="false">Q</a>
+                                  <a class="nav-item nav-link" id="nav-letter-r" data-toggle="tab" href="#nav-R" role="tab" aria-selected="false">R</a>
+                                  <a class="nav-item nav-link" id="nav-letter-s" data-toggle="tab" href="#nav-S" role="tab" aria-selected="false">S</a>
+                                  <a class="nav-item nav-link" id="nav-letter-t" data-toggle="tab" href="#nav-T" role="tab" aria-selected="false">T</a>
+                                  <a class="nav-item nav-link" id="nav-letter-u" data-toggle="tab" href="#nav-U" role="tab" aria-selected="false">U</a>
+                                  <a class="nav-item nav-link" id="nav-letter-v" data-toggle="tab" href="#nav-V" role="tab" aria-selected="false">V</a>
+                                  <a class="nav-item nav-link" id="nav-letter-w" data-toggle="tab" href="#nav-W" role="tab" aria-selected="false">W</a>
+                                  <a class="nav-item nav-link" id="nav-letter-x" data-toggle="tab" href="#nav-X" role="tab" aria-selected="false">X</a>
+                                  <a class="nav-item nav-link" id="nav-letter-y" data-toggle="tab" href="#nav-Y" role="tab" aria-selected="false">Y</a>
+                                  <a class="nav-item nav-link" id="nav-letter-z" data-toggle="tab" href="#nav-Z" role="tab" aria-selected="false">Z</a>
+                                </div>
+                              </nav>
+                              <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                <div class="tab-pane show active" id="nav-A" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-a.png">
+                                  <div class="titulo-por-universidad">Universidades A</div>
+                                </div>
+                                <div class="tab-pane" id="nav-B" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-b.png">
+                                  <div class="titulo-por-universidad">Universidades B</div>
+                                  <a href="#probando" type="button" style="margin-left: 210px;" class="btn boton-anadir-admin" role="button" aria-pressed="true">HOLA</a>
+                                  
+                                </div>
+                                <div class="tab-pane" id="nav-C" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-c.png">
+                                  <!--COMIENZA ACCORDION LETRA C-->
+                                  <div id="probando">
+                                  <div class="container-fluid" id="accordion-style-1">
+                                    <div class="container">                    
+                                        <div class="accordion" id="accordionUniversidadesC">
+                                            <!--CARD 1 - UNIVERSIDAD DE CALIFORNIA-->
+                                            <div class="card">
+                                                <div class="card-header">					
+                                                    <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseCalifornia" aria-expanded="false" >
+                                                    <i class="fa fa-angle-double-right mr-3"></i>Universidad de California</a>			  
+                                                </div>
+                                                <div id="collapseCalifornia" class="collapse">
+                                                    <div class="card-body">
+                                                      <div><i class="fas fa-circle"></i>Lugar</div>
+                                                      <div><i class="fas fa-circle"></i> Costo de vida</div>
+                                                      <div><i class="fas fa-circle"></i> Requisitos</div>
+                                                    </div><!--acaba card-body-->
+                                                </div>
+                                            </div><!--acaba card CHILE-->
+                                            <!--CARD 2 - California2-->
+                                            <div class="card">
+                                                <div class="card-header">					
+                                                    <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseCalifornia2" aria-expanded="false" >
+                                                    <i class="fa fa-angle-double-right mr-3"></i>California2</a>			  
+                                                </div>
+                                                <div id="collapseCalifornia2" class="collapse">
+                                                    <div class="card-body">
+                                                      <div><i class="fas fa-circle"></i>Lugar</div>
+                                                      <div><i class="fas fa-circle"></i> Costo de vida</div>
+                                                      <div><i class="fas fa-circle"></i> Requisitos</div>
+                                                    </div><!--acaba card-body-->
+                                                </div>
+                                            </div><!--acaba card COLOMBIA-->
+                                            <!---->
+                                        </div>  <!--acaba accordion id="accordionPaisesC"--> 
+                                    </div><!--acaba container-->
+                                  </div> <!--acaba container-fuild  id = accordion-style-1 -->
+                                </div>
+                                </div>
+                                <div class="tab-pane" id="nav-D" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-d.png">
+                                  <div class="titulo-por-universidad">Universidades D</div>
+                                </div>
+                                <div class="tab-pane" id="nav-E" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-e.png">
+                                  <div class="titulo-por-universidad">Universidades E</div>
+                                </div>
+                                <div class="tab-pane" id="nav-F" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-f.png">
+                                  <div class="titulo-por-universidad">Universidades F</div>
+                                </div>
+                                <div class="tab-pane" id="nav-G" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-g.png">
+                                  <div class="titulo-por-universidad">Universidades G</div>
+                                </div>
+                                <div class="tab-pane" id="nav-H" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-h.png">
+                                  <div class="titulo-por-universidad">Universidades H</div>
+                                </div>
+                                <div class="tab-pane" id="nav-I" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-i.png">
+                                  <div class="titulo-por-universidad">Universidades I</div>
+                                </div>
+                                <div class="tab-pane" id="nav-J" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-j.png">
+                                  <div class="titulo-por-universidad">Universidades J</div>
+                                </div>
+                                <div class="tab-pane" id="nav-K" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-k.png">
+                                  <div class="titulo-por-universidad">Universidades K</div>
+                                </div>
+                                <div class="tab-pane" id="nav-L" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-l.png">
+                                  <div class="titulo-por-universidad">Universidades L</div>
+                                </div>
+                                <div class="tab-pane" id="nav-M" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-m.png">
+                                  <div class="titulo-por-universidad">Universidades M</div>
+                                </div>
+                                <div class="tab-pane" id="nav-N" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-n.png">
+                                  <div class="titulo-por-universidad">Universidades N</div>
+                                </div>
+                                <div class="tab-pane" id="nav-O" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-o.png">
+                                  <div class="titulo-por-universidad">Universidades O</div>
+                                </div>
+                                <div class="tab-pane" id="nav-P" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-p.png">
+                                  <div class="titulo-por-universidad">Universidades P</div>
+                                </div>
+                                <div class="tab-pane" id="nav-Q" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-q.png">
+                                  <div class="titulo-por-universidad">Universidades Q</div>
+                                </div>
+                                <div class="tab-pane" id="nav-R" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-r.png">
+                                  <div class="titulo-por-universidad">Universidades R</div>
+                                </div>
+                                <div class="tab-pane" id="nav-S" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-s.png">
+                                  <div class="titulo-por-universidad">Universidades S</div>
+                                </div>
+                                <div class="tab-pane" id="nav-T" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-t.png">
+                                  <div class="titulo-por-universidad">Universidades T</div>
+                                </div>
+                                <div class="tab-pane" id="nav-U" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-u.png">
+                                  <div class="titulo-por-universidad">Universidades U</div>
+                                </div>
+                                <div class="tab-pane" id="nav-V" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-v.png">
+                                  <div class="titulo-por-universidad">Universidades V</div>
+                                </div>
+                                <div class="tab-pane" id="nav-W" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-w.png">
+                                  <div class="titulo-por-universidad">Universidades W</div>
+                                </div>
+                                <div class="tab-pane" id="nav-X" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-x.png">
+                                  <div class="titulo-por-universidad">Universidades X</div>
+                                </div>
+                                <div class="tab-pane" id="nav-Y" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-y.png">
+                                  <div class="titulo-por-universidad">Universidades Y</div>
+                                </div>
+                                <div class="tab-pane" id="nav-Z" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-z.png">
+                                  <div class="titulo-por-universidad">Universidades Z</div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!--POR PAIS-->
+                  <div class="tab-pane" id="pag8" role="tabpanel">
+                    <div class="sv-tab-panel ">
+                      <div class="titulo-por-universidad">Búsqueda A-Z</div>
+                      <!--LINKBAR-->
+                      <div class="posicion-letras-a-z">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-xs-12 ">
+                              <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                  <a class="nav-item nav-link active" id="nav-letter-a" data-toggle="tab" href="#nav-AA" role="tab" aria-selected="true">A</a>
+                                  <a class="nav-item nav-link" id="nav-letter-bb" data-toggle="tab" href="#nav-BB" role="tab" aria-selected="false">B</a>
+                                  <a class="nav-item nav-link" id="nav-letter-cc" data-toggle="tab" href="#nav-CC" role="tab" aria-selected="false">C</a>
+                                  <a class="nav-item nav-link" id="nav-letter-dd" data-toggle="tab" href="#nav-DD" role="tab" aria-selected="false">D</a>
+                                  <a class="nav-item nav-link" id="nav-letter-ee" data-toggle="tab" href="#nav-EE" role="tab" aria-selected="false">E</a>
+                                  <a class="nav-item nav-link" id="nav-letter-ff" data-toggle="tab" href="#nav-FF" role="tab" aria-selected="false">F</a>
+                                  <a class="nav-item nav-link" id="nav-letter-gg" data-toggle="tab" href="#nav-GG" role="tab" aria-selected="false">G</a>
+                                  <a class="nav-item nav-link" id="nav-letter-hh" data-toggle="tab" href="#nav-HH" role="tab" aria-selected="false">H</a>
+                                  <a class="nav-item nav-link" id="nav-letter-ii" data-toggle="tab" href="#nav-II" role="tab" aria-selected="false">I</a>
+                                  <a class="nav-item nav-link" id="nav-letter-jj" data-toggle="tab" href="#nav-JJ" role="tab" aria-selected="false">J</a>
+                                  <a class="nav-item nav-link" id="nav-letter-kk" data-toggle="tab" href="#nav-KK" role="tab" aria-selected="false">K</a>
+                                  <a class="nav-item nav-link" id="nav-letter-ll" data-toggle="tab" href="#nav-LL" role="tab" aria-selected="false">L</a>
+                                  <a class="nav-item nav-link" id="nav-letter-mm" data-toggle="tab" href="#nav-MM" role="tab" aria-selected="false">M</a>
+                                  <a class="nav-item nav-link" id="nav-letter-nn" data-toggle="tab" href="#nav-NN" role="tab" aria-selected="false">N</a>
+                                  <a class="nav-item nav-link" id="nav-letter-oo" data-toggle="tab" href="#nav-OO" role="tab" aria-selected="false">O</a>
+                                  <a class="nav-item nav-link" id="nav-letter-pp" data-toggle="tab" href="#nav-PP" role="tab" aria-selected="false">P</a>
+                                  <a class="nav-item nav-link" id="nav-letter-qq" data-toggle="tab" href="#nav-QQ" role="tab" aria-selected="false">Q</a>
+                                  <a class="nav-item nav-link" id="nav-letter-rr" data-toggle="tab" href="#nav-RR" role="tab" aria-selected="false">R</a>
+                                  <a class="nav-item nav-link" id="nav-letter-ss" data-toggle="tab" href="#nav-SS" role="tab" aria-selected="false">S</a>
+                                  <a class="nav-item nav-link" id="nav-letter-tt" data-toggle="tab" href="#nav-TT" role="tab" aria-selected="false">T</a>
+                                  <a class="nav-item nav-link" id="nav-letter-uu" data-toggle="tab" href="#nav-UU" role="tab" aria-selected="false">U</a>
+                                  <a class="nav-item nav-link" id="nav-letter-vv" data-toggle="tab" href="#nav-VV" role="tab" aria-selected="false">V</a>
+                                  <a class="nav-item nav-link" id="nav-letter-ww" data-toggle="tab" href="#nav-WW" role="tab" aria-selected="false">W</a>
+                                  <a class="nav-item nav-link" id="nav-letter-xx" data-toggle="tab" href="#nav-XX" role="tab" aria-selected="false">X</a>
+                                  <a class="nav-item nav-link" id="nav-letter-yy" data-toggle="tab" href="#nav-YY" role="tab" aria-selected="false">Y</a>
+                                  <a class="nav-item nav-link" id="nav-letter-zz" data-toggle="tab" href="#nav-ZZ" role="tab" aria-selected="false">Z</a>
+                                </div>
+                              </nav>
+                              <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                <div class="tab-pane show active" id="nav-AA" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-a.png">
+                                  <div class="titulo-por-universidad">Universidades A</div>
+                                </div>
+                                <div class="tab-pane" id="nav-BB" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-b.png">
+                                  <div class="titulo-por-universidad">Universidades B</div>
+                                </div>
+                                <div class="tab-pane" id="nav-CC" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-c.png">
+                                  <!--COMIENZA ACCORDION LETRA C-->
+                                  <div class="container-fluid" id="accordion-style-1">
+                                    <div class="container">                    
+                                        <div class="accordion" id="accordionPaisesC">
+                                            <!--CARD 1 - CHILE-->
+                                            <div class="card">
+                                                <div class="card-header">					
+                                                    <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" >
+                                                    <i class="fa fa-angle-double-right mr-3"></i>Chile</a>			  
+                                                </div>
+                                                <div id="collapseOne" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="accordion" id="accordionChile">
+                                                            <!--UNIVERSIDAD 1-->
+                                                            <div class="card">
+                                                                <div class="card-header" id="headingUniversidad1">				
+                                                                  <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseUniversidad1" aria-expanded="false" >
+                                                                  <i class="fa fa-angle-double-right mr-3"></i>Universidad 1</a>		  
+                                                                </div>
+                                                                <div id="collapseUniversidad1" class="collapse" data-parent="#accordionChile">
+                                                                  <div class="card-body">
+                                                                    <div><i class="fas fa-circle"></i>Lugar</div>
+                                                                    <div><i class="fas fa-circle"></i> Costo de vida</div>
+                                                                    <div><i class="fas fa-circle"></i> Requisitos</div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--UNIVERSIDAD 2-->
+                                                            <div class="card">
+                                                                <div class="card-header" id="headingUniversidad2">				
+                                                                  <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseUniversidad2" aria-expanded="false" >
+                                                                  <i class="fa fa-angle-double-right mr-3"></i>Universidad 2</a>		  
+                                                                </div>
+                                                                <div id="collapseUniversidad2" class="collapse" data-parent="#accordionChile">
+                                                                  <div class="card-body">
+                                                                    <div><i class="fas fa-circle"></i>Lugar</div>
+                                                                    <div><i class="fas fa-circle"></i> Costo de vida</div>
+                                                                    <div><i class="fas fa-circle"></i> Requisitos</div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--acaba class="accordion" id="Chile"-->
+                                                    </div><!--acaba card-body-->
+                                                </div>
+                                            </div><!--acaba card CHILE-->
+                                            <!--CARD 2 - COLOMBIA-->
+                                            <div class="card">
+                                                <div class="card-header">					
+                                                    <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" >
+                                                    <i class="fa fa-angle-double-right mr-3"></i>Colombia</a>			  
+                                                </div>
+                                                <div id="collapseTwo" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="accordion" id="accordionColombia">
+                                                            <!--UNIVERSIDAD 1-->
+                                                            <div class="card">
+                                                                <div class="card-header" id="headingUniversidadColombia1">				
+                                                                  <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseUniversidadColombia1" aria-expanded="false" >
+                                                                  <i class="fa fa-angle-double-right mr-3"></i>Universidad 1</a>		  
+                                                                </div>
+                                                                <div id="collapseUniversidadColombia1" class="collapse" data-parent="#accordionColombia">
+                                                                  <div class="card-body">
+                                                                    <div><i class="fas fa-circle"></i>Lugar</div>
+                                                                    <div><i class="fas fa-circle"></i> Costo de vida</div>
+                                                                    <div><i class="fas fa-circle"></i> Requisitos</div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--UNIVERSIDAD 2-->
+                                                            <div class="card">
+                                                                <div class="card-header" id="headingUniversidadColombia2">				
+                                                                  <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseUniversidadColombia2" aria-expanded="false" >
+                                                                  <i class="fa fa-angle-double-right mr-3"></i>Universidad 2</a>		  
+                                                                </div>
+                                                                <div id="collapseUniversidadColombia2" class="collapse" data-parent="#accordionColombia">
+                                                                  <div class="card-body">
+                                                                    <div><i class="fas fa-circle"></i>Lugar</div>
+                                                                    <div><i class="fas fa-circle"></i> Costo de vida</div>
+                                                                    <div><i class="fas fa-circle"></i> Requisitos</div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--acaba class="accordion" id="Chile"-->
+                                                    </div><!--acaba card-body-->
+                                                </div>
+                                            </div><!--acaba card COLOMBIA-->
+                                            <!---->
+                                        </div>  <!--acaba accordion id="uNIVERSIDADDES C"--> 
+                                    </div><!--acaba container-->
+                                </div> <!--acaba container-fuild  id = accordion-style-1 -->
+                                </div>
+                                <div class="tab-pane" id="nav-DD" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-d.png">
+                                  <div class="titulo-por-universidad">Universidades D</div>
+                                </div>
+                                <div class="tab-pane" id="nav-EE" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-e.png">
+                                  <div class="titulo-por-universidad">Universidades E</div>
+                                </div>
+                                <div class="tab-pane" id="nav-FF" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-f.png">
+                                  <div class="titulo-por-universidad">Universidades F</div>
+                                </div>
+                                <div class="tab-pane" id="nav-GG" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-g.png">
+                                  <div class="titulo-por-universidad">Universidades G</div>
+                                </div>
+                                <div class="tab-pane" id="nav-HH" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-h.png">
+                                  <div class="titulo-por-universidad">Universidades H</div>
+                                </div>
+                                <div class="tab-pane" id="nav-II" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-i.png">
+                                  <div class="titulo-por-universidad">Universidades I</div>
+                                </div>
+                                <div class="tab-pane" id="nav-JJ" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-j.png">
+                                  <div class="titulo-por-universidad">Universidades J</div>
+                                </div>
+                                <div class="tab-pane" id="nav-KK" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-k.png">
+                                  <div class="titulo-por-universidad">Universidades K</div>
+                                </div>
+                                <div class="tab-pane" id="nav-LL" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-l.png">
+                                  <div class="titulo-por-universidad">Universidades L</div>
+                                </div>
+                                <div class="tab-pane" id="nav-MM" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-m.png">
+                                  <div class="titulo-por-universidad">Universidades M</div>
+                                </div>
+                                <div class="tab-pane" id="nav-NN" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-n.png">
+                                  <div class="titulo-por-universidad">Universidades N</div>
+                                </div>
+                                <div class="tab-pane" id="nav-OO" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-o.png">
+                                  <div class="titulo-por-universidad">Universidades O</div>
+                                </div>
+                                <div class="tab-pane" id="nav-PP" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-p.png">
+                                  <div class="titulo-por-universidad">Universidades P</div>
+                                </div>
+                                <div class="tab-pane" id="nav-QQ" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-q.png">
+                                  <div class="titulo-por-universidad">Universidades Q</div>
+                                </div>
+                                <div class="tab-pane" id="nav-RR" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-r.png">
+                                  <div class="titulo-por-universidad">Universidades R</div>
+                                </div>
+                                <div class="tab-pane" id="nav-SS" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-s.png">
+                                  <div class="titulo-por-universidad">Universidades S</div>
+                                </div>
+                                <div class="tab-pane" id="nav-TT" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-t.png">
+                                  <div class="titulo-por-universidad">Universidades T</div>
+                                </div>
+                                <div class="tab-pane" id="nav-UU" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-u.png">
+                                  <div class="titulo-por-universidad">Universidades U</div>
+                                </div>
+                                <div class="tab-pane" id="nav-VV" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-v.png">
+                                  <div class="titulo-por-universidad">Universidades V</div>
+                                </div>
+                                <div class="tab-pane" id="nav-WW" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-w.png">
+                                  <div class="titulo-por-universidad">Universidades W</div>
+                                </div>
+                                <div class="tab-pane" id="nav-XX" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-x.png">
+                                  <div class="titulo-por-universidad">Universidades X</div>
+                                </div>
+                                <div class="tab-pane" id="nav-YY" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-y.png">
+                                  <div class="titulo-por-universidad">Universidades Y</div>
+                                </div>
+                                <div class="tab-pane" id="nav-ZZ" role="tabpanel" >
+                                  <img class="pos-letters" src="img/letters/letter-z.png">
+                                  <div class="titulo-por-universidad">Universidades Z</div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!--POR CONTINENTE-->
+                  <div class="tab-pane" id="pag9" role="tabpanel">
+                    <div class="sv-tab-panel titulo-por-universidad">
+                      <h3>POR CONTINENTE</h3>
+                      <!-- Accordion -->
+                        <div class="container-fluid bg-gray" id="accordion-style-1">
+                          <div class="container">
+                            
+                              <div class="row">
+                                
+                                <div class="col-10 mx-auto">
+                                  <div class="accordion" id="accordionContinentes">
+                                    <!--CARD 1 - AFRICA-->
+                                    <div class="card">
+                                      <div class="card-header" id="headingOne">					
+                                        <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" >
+                                          <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>África
+                                        </a>			  
+                                      </div>
+                                      <!-- CARD 1 -CONTENIDO AFRICA-->
+                                      <div id="collapseOne" class="collapse"  data-parent="#accordionContinentes">
+                                        <div class="card-body">
+                                              <div class="accordion" id="accordionPaises">
+                                                <!--PAIS 1- ANGOLA-->
+                                                <div class="card">
+                                                  <div class="card-header" id="headingAngola">				
+                                                    <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseAngola" aria-expanded="false" >
+                                                    <i class="fa fa-angle-double-right mr-3"></i>Angola</a>		  
+                                                  </div>
+                                                  <div id="collapseAngola" class="collapse" data-parent="#accordionPaises">
+                                                    <div class="card-body">
+                                                      <div><i class="fas fa-circle"></i> Universidad 1</div>
+                                                      <div><i class="fas fa-circle"></i> Universidad 2</div>
+                                                      <div><i class="fas fa-circle"></i> Universidad 3</div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <!--PAIS 2 - ARGELIA-->
+                                                <div class="card">
+                                                  <div class="card-header" id="headingArgelia">				
+                                                    <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseArgelia" aria-expanded="false" >
+                                                    <i class="fa fa-angle-double-right mr-3"></i>Angola</a>		  
+                                                  </div>
+                                                  <div id="collapseArgelia" class="collapse" data-parent="#accordionPaises">
+                                                    <div class="card-body">
+                                                      <div><i class="fas fa-circle"></i> Universidad 1</div>
+                                                      <div><i class="fas fa-circle"></i> Universidad 2</div>
+                                                      <div><i class="fas fa-circle"></i> Universidad 3</div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <!---->
+                                              </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--CARD 2 - AMERICA-->
+                                    <div class="card">
+                                      <div class="card-header" id="headingTwo">				
+                                        <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" >
+                                        <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>Ámerica </a>		  
+                                      </div>
+                                      <!-- CARD 2 - CONTENIDO AMERICA -->
+                                      <div id="collapseTwo" class="collapse" data-parent="#accordionContinentes">
+                                        <div class="card-body">
+                                          <div class="accordion" id="accordionPaisesAmerica">
+                                            <!--PAIS 1- ARGENTINA-->
+                                            <div class="card">
+                                              <div class="card-header" id="headingArgentina">				
+                                                <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseArgentina" aria-expanded="false" >
+                                                <i class="fa fa-angle-double-right mr-3"></i>Argentina</a>		  
+                                              </div>
+                                              <div id="collapseArgentina" class="collapse" data-parent="#accordionPaisesAmerica">
+                                                <div class="card-body">
+                                                  <div><i class="fas fa-circle"></i> Universidad 1</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 2</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 3</div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!--PAIS 2 - BRASIL-->
+                                            <div class="card">
+                                              <div class="card-header" id="headingBrasil">				
+                                                <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseBrasil" aria-expanded="false" >
+                                                <i class="fa fa-angle-double-right mr-3"></i>Brasil</a>		  
+                                              </div>
+                                              <div id="collapseBrasil" class="collapse" data-parent="#accordionPaisesAmerica">
+                                                <div class="card-body">
+                                                  <div><i class="fas fa-circle"></i> Universidad 1</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 2</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 3</div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!---->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- CARD 3 - ASIA-->
+                                    <div class="card">
+                                      <div class="card-header" id="headingThree">				
+                                        <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false">
+                                          <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>Asia
+                                        </a>					  
+                                      </div>
+                                      <!-- CARD 3 -CONTENIDO ASIA-->
+                                      <div id="collapseThree" class="collapse"  data-parent="#accordionContinentes">
+                                        <div class="card-body">
+                                          <div class="accordion" id="accordionPaisesAsia">
+                                            <!--PAIS 1- AFGANISTAN-->
+                                            <div class="card">
+                                              <div class="card-header" id="headingAfganistan">				
+                                                <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseAfganistan" aria-expanded="false" >
+                                                <i class="fa fa-angle-double-right mr-3"></i>Afganistán</a>		  
+                                              </div>
+                                              <div id="collapseAfganistan" class="collapse" data-parent="#accordionPaisesAsia">
+                                                <div class="card-body">
+                                                  <div><i class="fas fa-circle"></i> Universidad 1</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 2</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 3</div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!--PAIS 2 - CHINA-->
+                                            <div class="card">
+                                              <div class="card-header" id="headingChina">				
+                                                <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseChina" aria-expanded="false" >
+                                                <i class="fa fa-angle-double-right mr-3"></i>China</a>		  
+                                              </div>
+                                              <div id="collapseChina" class="collapse" data-parent="#accordionPaisesAsia">
+                                                <div class="card-body">
+                                                  <div><i class="fas fa-circle"></i> Universidad 1</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 2</div>
+                                                  <div><i class="fas fa-circle"></i> Universidad 3</div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!---->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--CARD 4 - EUROPA-->
+                                    <div class="card">
+                                      <div class="card-header" id="headingFour">				
+                                        <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" >
+                                          <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>Europa
+                                        </a>					  
+                                      </div>
+                                      <!-- CARD 4 -CONTENIDO EUROPA-->
+                                      <div id="collapseFour" class="collapse"  data-parent="#accordionContinentes">
+                                        <div class="card-body">
+                                          Anim pariatur cliche reprehenderit, enim eiusmod high life 
+                                          accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+                                          non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                          laborum eiusmod.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--CARD 5 - CONTENIDO OCEANIA-->
+                                    <div class="card">
+                                      <div class="card-header" id="headingFive">							
+                                        <a class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false">
+                                          <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>Oceania
+                                        </a>	  
+                                      </div>
+                                      <!-- CARD 5 -CONTENIDO OCEANIA-->
+                                      <div id="collapseFive" class="collapse"  data-parent="#accordionContinentes">
+                                        <div class="card-body">
+                                          Anim pariatur cliche reprehenderit, enim eiusmod high life 
+                                          accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+                                          non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                          laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a 
+                                          bird on it squid single-origin coffee nulla assumenda shoreditch 
+                                          et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                          cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                          vice lomo. Leggings occaecat craft beer farm-to-table, raw denim 
+                                          aesthetic synth nesciunt you probably haven't heard of them 
+                                          accusamus labore sustainable VHS.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+
+                                  </div>
+                                </div>	
+                              </div>
+                          </div>
+                        </div>
+                      <!-- .// Accordion -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <!--NABVAR VERTICAL-->
+              
+              
+            </div>
+        </div>
+    
+
+    <!-- Optional JavaScript -->
+    <script src="js/admin.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    
+  </body>
+</html>
