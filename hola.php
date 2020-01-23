@@ -127,13 +127,16 @@
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#pag00" role="tab">Añadir programas</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag000" role="tab">Mensajes</a>
+                  </li>
                 </ul> <!--ACABA NAV NAV-TABS-->
                 <!--BAR VERTICAL-->
                 <div class="tab-content"> <!--COMIENZA TAB-CONTENT-->
                   <!----------------   TAB 1  estudiantes------------------------>
                   <div class="tab-pane active" id="pag1" role="tabpanel"> <!--COMIENZA TAB-PANE ESTUDIANTES-->
                     <div class="sv-tab-panel anadir-est ">
-                    <!--AÑADIR ESTUDIANTES-->
+                    <!--AÑADIR ESTUDIANTES/DOCENTES-->
                     <div class="card border-dark" id="formularioEst" style="width: 45rem; margin-top: 40px; margin-left: 40px;"> <!--COMIENZA CARD BORDER-DARK-->
                       <div class="card-body"> <!--COMIENZA CARD-BODY-->
                         Añadir estudiantes/docentes:
@@ -158,7 +161,7 @@
                                         <input type="radio" name="radioEstDoc" value="no">
                                         <span class="checkmark"></span>
                                     </label>
-                                  </div>
+                                </div>
                               </div>
                             </div> <!--ACABA FORM-INLINE-->
                           </div> <!--ACABA INPUT-CODIGO-->
@@ -263,13 +266,14 @@
                         <div class="card-body"> <!--COMIENZA CARD-BODY-->
                           Añadir Convenios:
                           <form class="form-inline" action="anadirUniversidad.php" method="POST">
-                            <div class="input-de-anadir"> <!--COMIENZA INPUT-DE-ANADIR-->
+                            <div class="input-de-anadir" style="margin-left: 20px;"> <!--COMIENZA INPUT-DE-ANADIR-->
                               <div class="form-group"> <!--COMIENZA FORM-GROUP-->
                                 <!--NOMBRE DEL INSTITUTO O UNIVERSIDAD-->
                                 <label class="col-6 col-form-label text-center">Nombre de Instituto o Universidad:</label>
                                 <div class="col-6">
                                   <input type="text" name="nombreUniversidad"  id="universidad" class="form-control input-lg" placeholder="Universidad EAFIT" required/>
                                 </div> 
+                                
                                 <!--PAIS-->
                                 <label class="col-6 col-form-label" style="margin-top:10px;">País:</label>
                                 <div class="col-6" style="margin-top:10px;">
@@ -304,7 +308,7 @@
                                       if ($resulcheck1111) {
                                           echo "hola";
                                           while($row = mysqli_fetch_array($resulcheck1111)){
-                                              echo "<option value='".$row['nombre_programa']."'>";
+                                              echo "<option   value='".$row['nombre_programa']."'>";
                                               echo $row['nombre_programa'];
                                               echo "</option>";
                                           } 
@@ -336,7 +340,25 @@
                                 <div class="col-6">
                                     <textarea style="padding-left: 70px;" name="enlaces_de_interes" class="form-control" rows="3" placeholder=" www.pagina.com" required></textarea>
                                 </div>
-                                <!---->
+                                <!--VA DIRIGIDO A -->
+                                <label class="col-7 col-form-label"><div style="margin-left:-100px;">Va dirigido a:</div> </label>
+                                <div class="col-5">
+                                <div class="containerrr" style="margin-left:-100px;">      
+                                    <label class="containerrr" style="font-size: 5mm;"> Estudiantes
+                                        <input type="radio" checked="checked" name="radioEstuDoce" value="radioEst">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="containerrr" style="font-size: 5mm;">Docentes
+                                        <input type="radio" name="radioEstuDoce" value="radioDoc">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="containerrr" style="font-size: 5mm;">Estudiantes/Docentes
+                                        <input type="radio" name="radioEstuDoce" value="radioEstDoc">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                </div> 
+                                
                               </div> <!--ACABA FORM-GROUP-->
                             </div> <!--ACABA INPUT-DE-ANADIR-->
                             <button type="submit" style="margin-left:350px;" name="submit_anadir_convenio"class="btn boton-circle">Guardar</button>
@@ -445,13 +467,23 @@
                     </div>
                   </div> <!--ACABA TAB-PANE PROGRAMAS-->
                   <!--CERRANDO AÑADIENDO PROGRAMAS-->
+                  <!-----------------------TAB 000 - MENSAJES----------------------------->
+                  <div class="tab-pane" id="pag000" role="tabpanel"> <!--COMIENZA TAB-PANE MENSAJES-->
+                    <div class="sv-tab-panel anadir-est">
+                    
+                    <h3>HOLA MENSAJES</h3>
+                    </div>
+                  </div> <!--ACABA TAB-PANE MENSAJES-->
+                  <!------------------ACABA LA TAB DE MENSAJES-------->
 
                   </div> <!--ACABA TAB-CONTENT-->
                 </div> <!--ACABA VERITCAL-TABS-->
               </div> <!--ACABA SV-TAB-PANEL-->
                 <!--HASTA AQUI-->    
+                
           </div> <!--ACABA TAB-PANE PAG5-->
-              
+           
+
           <!--TAB 6 CONTENIDOS-->
           <div class="tab-pane" id="pag6" role="tabpanel"> <!--COMIENZA TAB-PANE CONTENIDOS-->
             <div class="sv-tab-panel titulo-por-universidad">
@@ -460,7 +492,7 @@
       include('dbconnect.php');
 
       //create query
-      $query = "SELECT * FROM universidades";
+      $query = "SELECT * FROM universidades order by nombre";
       $result = mysqli_query($conn, $query);
     ?>
 
@@ -485,8 +517,8 @@
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['pais']; ?></td>
                 <td>
-                  <a href="editform.php?id=<?php echo $row['id_universidad']; ?>" class="btn btn-success" style="background:#FE4164;" role="button">Editar</a>
-                  <a href="delete.php?id=<?php echo $row['id_universidad']; ?>" class="btn btn-danger" style="background:black;" role="button">Eliminar</a>
+                  <a href="editform.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:#FE4164; color: black;" role="button">Editar</a>
+                  <a href="delete.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:black; color: white;" role="button">Eliminar</a>
                 </td>
             </tr>
             <?php
@@ -516,7 +548,7 @@
                 $resultContinente22 = mysqli_query($conn, $queryContinente22);
               ?>
               <!-- Accordion -->
-              <div class="container-fluid bg-gray" id="accordion-style-1"> <!--COMIENZA CONTAINER-FLUID BG-GRAY-->
+              <div class="container-fluid bg-gray" id="accordion-style-1" style="margin-top:20px;"> <!--COMIENZA CONTAINER-FLUID BG-GRAY-->
                 <div class="container"> <!--COMIENZA CONTAINER-->
                   <div class="row"> <!--COMIENZA ROW-->
                     <div class="col-10 mx-auto"> <!--COMIENZA col-10 mx-auto-->
@@ -531,13 +563,18 @@
                                   <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowresultContinente22['nombre']; ?></a>		  
                               </div>
                               <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                <div class="card-body">
+                                <div class="card-body" style="font-size: 5mm;">
                                   <div><i class="fas fa-circle"></i>País:</br><?php echo $rowresultContinente22['pais']; ?></div>
+                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                   <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowresultContinente22['programas']; ?></div>
+                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                   <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowresultContinente22['descripcion']; ?></div>
+                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                   <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowresultContinente22['fecha_habilitada']; ?></div>
+                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                   <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowresultContinente22['fecha_vencimiento']; ?></div>
-                                  <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowresultContinente22['enlace_de_interes']; ?></div>
+                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                  <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowresultContinente22['enlace_de_interes']."'>'".$rowresultContinente22['enlace_de_interes']."'</a>";?></div>
                                 </div>
                               </div>
                             </div> <!--ACABA CARD-->
@@ -621,13 +658,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowA['pais'] . " - ".$rowA['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowA['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowA['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowA['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowA['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowA['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowA['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowA['enlace_de_interes']."'>'".$rowA['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -670,13 +712,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowB['pais'] . " - ".$rowB['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowB['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowB['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowB['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowB['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowB['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowB['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowB['enlace_de_interes']."'>'".$rowB['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -719,7 +766,7 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowC['pais'] . " - ".$rowC['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowC['pais']; ?></div>
                                                                         <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowC['programas']; ?></div>
@@ -730,7 +777,7 @@
                                                                         <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowC['fecha_vencimiento']; ?></div>
                                                                         <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowC['enlace_de_interes']; ?></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowC['enlace_de_interes']."'>'".$rowC['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -773,13 +820,13 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowD['pais'] . " - ".$rowD['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowD['pais']; ?></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowD['programas']; ?></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowD['descripcion']; ?></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowD['fecha_habilitada']; ?></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowD['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowD['enlace_de_interes']; ?></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowD['enlace_de_interes']."'>'".$rowD['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -822,13 +869,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowE['pais'] . " - ".$rowE['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowE['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowE['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowE['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowE['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowE['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowE['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowE['enlace_de_interes']."'>'".$rowE['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -871,13 +923,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowF['pais'] . " - ".$rowF['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowF['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowF['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowF['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowF['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowF['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowF['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowF['enlace_de_interes']."'>'".$rowF['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -920,13 +977,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowG['pais'] . " - ".$rowG['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowG['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowG['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowG['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowG['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowG['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowG['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowG['enlace_de_interes']."'>'".$rowG['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -969,13 +1031,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowH['pais'] . " - ".$rowH['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowH['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowH['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowH['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowH['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowH['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowH['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowH['enlace_de_interes']."'>'".$rowH['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1018,13 +1085,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowI['pais'] . " - ".$rowI['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowI['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowI['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowI['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowI['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowI['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowI['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowI['enlace_de_interes']."'>'".$rowI['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1067,13 +1139,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowJ['pais'] . " - ".$rowJ['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowJ['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowJ['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowJ['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowJ['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowJ['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowJ['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowJ['enlace_de_interes']."'>'".$rowJ['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1116,13 +1193,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowK['pais'] . " - ".$rowK['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowK['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowK['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowK['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowK['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowK['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowK['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowK['enlace_de_interes']."'>'".$rowK['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1165,13 +1247,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowL['pais'] . " - ".$rowL['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowL['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowL['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowL['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowL['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowL['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowL['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowL['enlace_de_interes']."'>'".$rowL['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1214,13 +1301,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowM['pais'] . " - ".$rowM['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowM['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowM['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowM['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowM['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowM['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowM['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowM['enlace_de_interes']."'>'".$rowM['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1263,13 +1355,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowN['pais'] . " - ".$rowN['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowN['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowN['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowN['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowN['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowN['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowN['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowN['enlace_de_interes']."'>'".$rowN['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1312,13 +1409,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowO['pais'] . " - ".$rowO['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowO['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowO['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowO['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowO['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowO['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowO['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowO['enlace_de_interes']."'>'".$rowO['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1361,13 +1463,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowP['pais'] . " - ".$rowP['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowP['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowP['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowP['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowP['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowP['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowP['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowP['enlace_de_interes']."'>'".$rowP['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1410,13 +1517,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowQ['pais'] . " - ".$rowQ['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowQ['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowQ['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowQ['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowQ['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowQ['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowQ['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowQ['enlace_de_interes']."'>'".$rowQ['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1459,13 +1571,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowR['pais'] . " - ".$rowR['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowR['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowR['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowR['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowR['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowR['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowR['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowR['enlace_de_interes']."'>'".$rowR['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1508,13 +1625,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowS['pais'] . " - ".$rowS['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowS['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowS['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowS['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowS['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowS['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowS['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowS['enlace_de_interes']."'>'".$rowS['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1557,13 +1679,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowT['pais'] . " - ".$rowT['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowT['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowT['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowT['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowT['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowT['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowT['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowT['enlace_de_interes']."'>'".$rowT['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1606,13 +1733,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowU['pais'] . " - ".$rowU['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowU['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowU['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowU['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowU['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowU['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowU['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowU['enlace_de_interes']."'>'".$rowU['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1655,13 +1787,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowV['pais'] . " - ".$rowV['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowV['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowV['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowV['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowV['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowV['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowV['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowV['enlace_de_interes']."'>'".$rowV['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1704,13 +1841,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowW['pais'] . " - ".$rowW['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowW['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowW['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowW['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowW['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowW['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowW['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowW['enlace_de_interes']."'>'".$rowW['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1753,13 +1895,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowX['pais'] . " - ".$rowX['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowX['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowX['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowX['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowX['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowX['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowX['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowX['enlace_de_interes']."'>'".$rowX['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1802,13 +1949,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowY['pais'] . " - ".$rowY['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowY['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowY['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowY['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowY['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowY['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowY['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowY['enlace_de_interes']."'>'".$rowY['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1851,13 +2003,18 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowZ['pais'] . " - ".$rowZ['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body">
+                                                                    <div class="card-body" style="font-size: 5mm;">
                                                                         <div><i class="fas fa-circle"></i>País:</br><?php echo $rowZ['pais']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowZ['programas']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowZ['descripcion']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowZ['fecha_habilitada']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
                                                                         <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowZ['fecha_vencimiento']; ?></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo $rowZ['enlace_de_interes']; ?></div>
+                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowZ['enlace_de_interes']."'>'".$rowZ['enlace_de_interes']."'</a>";?></div>
                                                                                 
                                                                     </div>
                                                                 </div>
@@ -1930,13 +2087,18 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowresultContinente1['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola" class="collapse" data-parent="#accordionPaises">
-                                                <div class="card-body">
-                                                    <div><i class="fas fa-circle"></i>País:<?php echo $rowresultContinente1['pais']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:<?php echo $rowresultContinente1['programas']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:<?php echo $rowresultContinente1['descripcion']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:<?php echo $rowresultContinente1['fecha_habilitada']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:<?php echo $rowresultContinente1['fecha_vencimiento']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:<?php echo $rowresultContinente1['enlace_de_interes']; ?></div>
+                                                <div class="card-body" style="font-size: 5mm;">
+                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowresultContinente1['pais']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowresultContinente1['programas']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowresultContinente1['descripcion']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowresultContinente1['fecha_habilitada']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowresultContinente1['fecha_vencimiento']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowresultContinente1['enlace_de_interes']."'>'".$rowresultContinente1['enlace_de_interes']."'</a>";?></div>
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -1970,13 +2132,18 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente2['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola2" class="collapse" data-parent="#accordionPaises2">
-                                                <div class="card-body">
-                                                    <div><i class="fas fa-circle"></i>País:<?php echo $rowContinente2['pais']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:<?php echo $rowContinente2['programas']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:<?php echo $rowContinente2['descripcion']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:<?php echo $rowContinente2['fecha_habilitada']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:<?php echo $rowContinente2['fecha_vencimiento']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:<?php echo $rowContinente2['enlace_de_interes']; ?></div>
+                                                <div class="card-body" style="font-size: 5mm;">
+                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente2['pais']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente2['programas']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente2['descripcion']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente2['fecha_habilitada']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente2['fecha_vencimiento']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente2['enlace_de_interes']."'>'".$rowContinente2['enlace_de_interes']."'</a>";?></div>
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -2010,13 +2177,18 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente3['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola3" class="collapse" data-parent="#accordionPaises3">
-                                                <div class="card-body">
-                                                    <div><i class="fas fa-circle"></i>País:<?php echo $rowContinente3['pais']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:<?php echo $rowContinente3['programas']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:<?php echo $rowContinente3['descripcion']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:<?php echo $rowContinente3['fecha_habilitada']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:<?php echo $rowContinente3['fecha_vencimiento']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:<?php echo $rowContinente3['enlace_de_interes']; ?></div>
+                                                <div class="card-body" style="font-size: 5mm;">
+                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente3['pais']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente3['programas']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente3['descripcion']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente3['fecha_habilitada']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente3['fecha_vencimiento']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente3['enlace_de_interes']."'>'".$rowContinente3['enlace_de_interes']."'</a>";?></div>
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -2050,13 +2222,18 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente4['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola4" class="collapse" data-parent="#accordionPaises4">
-                                                <div class="card-body" >
-                                                    <div><i class="fas fa-circle"></i>País:<?php echo $rowContinente4['pais']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:<?php echo $rowContinente4['programas']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:<?php echo $rowContinente4['descripcion']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:<?php echo $rowContinente4['fecha_habilitada']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:<?php echo $rowContinente4['fecha_vencimiento']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:<?php echo $rowContinente4['enlace_de_interes']; ?></div>
+                                                <div class="card-body" style="font-size: 5mm;">
+                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente4['pais']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente4['programas']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente4['descripcion']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente4['fecha_habilitada']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente4['fecha_vencimiento']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente4['enlace_de_interes']."'>'".$rowContinente4['enlace_de_interes']."'</a>";?></div>
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -2090,13 +2267,18 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente5['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola5" class="collapse" data-parent="#accordionPaises5">
-                                                <div class="card-body">
-                                                    <div><i class="fas fa-circle"></i>País:<?php echo $rowContinente5['pais']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:<?php echo $rowContinente5['programas']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:<?php echo $rowContinente5['descripcion']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:<?php echo $rowContinente5['fecha_habilitada']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:<?php echo $rowContinente5['fecha_vencimiento']; ?></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:<?php echo $rowContinente5['enlace_de_interes']; ?></div>
+                                                <div class="card-body" style="font-size: 5mm;">
+                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente5['pais']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente5['programas']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente5['descripcion']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente5['fecha_habilitada']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente5['fecha_vencimiento']; ?></div>
+                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
+                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente5['enlace_de_interes']."'>'".$rowContinente5['enlace_de_interes']."'</a>";?></div>
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->

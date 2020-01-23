@@ -9,6 +9,7 @@
     $descripcion = $_POST['descripcion'];
     $enlaces_de_interes = $_POST['enlaces_de_interes'];
     $continente = null;
+    $valor = $_POST['radioEstuDoce'];
     
     if(isset($_POST['submit_anadir_convenio'])){  
         //SELECCION DE LOS PROGRAMAS 
@@ -58,15 +59,34 @@
         } else if ($pais=="Venezuela") { $continente=2;} else if ($pais=="Vietnam") { $continente=3;} else if ($pais=="Yemen") { $continente=3;} else if ($pais=="Yibuti") { $continente=1;} else if ($pais=="Zambia") { $continente=1; } else if ($pais=="Zimbabue") { $continente=1;} else if ($pais=="Puerto Rico") { $continente=2;}
 
 
-        $query = "INSERT INTO universidades(nombre,pais,continente,fecha_firma_convenio,programas,fecha_habilitada,fecha_vencimiento,descripcion,enlace_de_interes)  VALUES('$nombre','$pais','$continente','$fecha_firma_convenio','$todosProgramas','$fecha_habilitada','$fecha_vencimiento','$descripcion','$enlaces_de_interes')";
         
-        if (mysqli_query($conn, $query)) {
-            echo "se añadio la universidad";  
-            header("Location:mensajes/mensaje7.php");       
-        } else {
-            echo "no se puedo añadir el programa";
+        if ($valor=="radioEst") {
+            $query = "INSERT INTO universidades(nombre,pais,continente,fecha_firma_convenio,programas,fecha_habilitada,fecha_vencimiento,descripcion,enlace_de_interes,para_estudiantes,para_docentes)  VALUES('$nombre','$pais','$continente','$fecha_firma_convenio','$todosProgramas','$fecha_habilitada','$fecha_vencimiento','$descripcion','$enlaces_de_interes',true,false)";
+            if (mysqli_query($conn, $query)) {
+                echo "se añadio la universidad"; 
+                //echo "<a href='".$enlaces_de_interes."'>$enlaces_de_interes</a>";
+                header("Location:mensajes/mensaje7.php");      
+            } else {
+                echo "no se puedo añadir el programa";
+            }
+        } else if ($valor=="radioDoc") {
+            $query = "INSERT INTO universidades(nombre,pais,continente,fecha_firma_convenio,programas,fecha_habilitada,fecha_vencimiento,descripcion,enlace_de_interes,para_estudiantes,para_docentes)  VALUES('$nombre','$pais','$continente','$fecha_firma_convenio','$todosProgramas','$fecha_habilitada','$fecha_vencimiento','$descripcion','$enlaces_de_interes',false,true)";
+            if (mysqli_query($conn, $query)) {
+                echo "se añadio la universidad";  
+                header("Location:mensajes/mensaje7.php");      
+            } else {
+                echo "no se puedo añadir el programa";
+            }
+        } else if ($valor=="radioEstDoc") {
+            $query = "INSERT INTO universidades(nombre,pais,continente,fecha_firma_convenio,programas,fecha_habilitada,fecha_vencimiento,descripcion,enlace_de_interes,para_estudiantes,para_docentes)  VALUES('$nombre','$pais','$continente','$fecha_firma_convenio','$todosProgramas','$fecha_habilitada','$fecha_vencimiento','$descripcion','$enlaces_de_interes',true,true)";
+            if (mysqli_query($conn, $query)) {
+                echo "se añadio la universidad";  
+                header("Location:mensajes/mensaje7.php");      
+            } else {
+                echo "no se puedo añadir el programa";
+            }
         }
-
+        
     } else {
       echo "no entra";
     }

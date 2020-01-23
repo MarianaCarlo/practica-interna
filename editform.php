@@ -27,7 +27,7 @@
     <!--JS-->
     <script src="js/toast_script.js"></script>
     <script src="js/toastr.js"></script>
-    <title>Hello, world!</title>
+    <title>Contenido de convenios</title>
   </head>
   <body>
 
@@ -59,7 +59,7 @@
               
               ?>
               
-              <input type="hidden" name="id_universidad" value="<?php echo $row['id_universidad'] ?>">
+              <input type="hidden" name="id" value="<?php echo $row['id_universidad'] ?>">
               <!--NOMBRE DE LA UNIVERSIDAD-->
               <div class ="card border-success" style="margin-top:20px; max-width: 50rem; margin-left:150px;padding-right:20px;">
               <div class="form-group">
@@ -72,14 +72,14 @@
               <div class="form-group">
                 <label>Pais</label>
               </br>
-              <input style="margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px;" type="text" name="pais" class="form-control" value="<?php echo $row['pais'] ?>" disabled>
+              <input style="margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px;" type="text" name="pais" class="form-control" value="<?php echo $row['pais'] ?>" required readonly>
               </div>
               </div>
               <!--FECHA DE FIRMA DE CONVENIO-->
               <div class ="card border-success" style="margin-top:20px; max-width: 50rem; margin-left:150px;padding-right:20px;">
               <div class="form-group">
                 <label>Fecha de firma de convenio:</label>
-                <input style="margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px;" class="form-control input-lg" name="fecha_firma_convenio" type="date" value="<?php echo $row['fecha_firma_convenio'] ?>" id="date-input">
+                <input style="margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px;" type="date" name="fecha_firma_convenio" class="form-control" value="<?php echo $row['fecha_firma_convenio'] ?>" >
               </div>
               </div>
               <!--FECHA DE HABILITADA-->
@@ -99,11 +99,11 @@
               <!--DESCRIPCION-->
               <div class ="card border-success" style="margin-top:20px; max-width: 50rem; margin-left:150px;padding-right:20px;">
               <div class="form-group">
-                <label>Descripción:</label>
-                <input style="margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px;" name="descripcion" class="form-control" value="<?php echo $row['descripcion'] ?>" rows="3" required></input>
+                <label>descripción:</label>
+                <input style="margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px;" type="text" name="desc" class="form-control" value="<?php echo $row['descripcion'] ?>" >
               </div>
               </div>
-              <!--DESCRIPCION-->
+              <!--ENLACES DE INTERES-->
               <div class ="card border-success" style="margin-top:20px; max-width: 50rem; margin-left:150px;padding-right:20px;">
               <div class="form-group">
                 <label>Enlace de interes:</label>
@@ -111,7 +111,7 @@
               </div>
               </div>
               </br>
-              <button type="submit" style="margin-left:500px;" class="btn boton-circle">Edit</button>
+              <button name="submit_update_uni" type="submit" style="margin-left:500px;" class="btn boton-circle">Edit</button>
                 <?php
                 }
                 mysqli_close($conn);
