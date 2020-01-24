@@ -21,7 +21,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link href="css/admin.css" rel="stylesheet" >
+    <link href="css/mostrarContenidos.css" rel="stylesheet">
     <link href="css/radiobutton.css" rel="stylesheet" >
     <link href="css/toastr.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
@@ -76,22 +76,18 @@
       <div class="vertical-tab"> <!------COMIENZA VERTICAL-TAB------->  
         <ul class="nav nav-tab" role="tablist"> <!--COMIENZA NAV NAV-TAB-->
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#pag5" role="tab" >Información</a>
+            <a class="nav-link active" data-toggle="tab" href="#pag5" role="tab" >INFORMACIÓN</a>
           </li>
   
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#pag6" role="tab" >Por Tipo</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#pag7" role="tab" >Por Universidad/institución</a>
+            <a class="nav-link" data-toggle="tab" href="#pag7" role="tab" >POR UNIVERSIDAD/INSTITUCIÓN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#pag8" role="tab" >Por País</a>
+            <a class="nav-link" data-toggle="tab" href="#pag8" role="tab" >POR PAÍS</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#pag9" role="tab" >Por Continente</a>
+            <a class="nav-link" data-toggle="tab" href="#pag9" role="tab" >POR CONTINENTE</a>
           </li>
           
         </ul> <!--ACABA NAV NAV-TAB-->
@@ -118,126 +114,7 @@
             </div>
           </div> <!--ACABA TAB-PANE PAG5-->
               
-          <!--TAB 6 POR TIPO-->
-          <div class="tab-pane" id="pag6" role="tabpanel"> <!--COMIENZA TAB-PANE POR TIPO-->
-            <div class="sv-tab-panel titulo-por-universidad">
-            <?php
-                // add dbconnection
-                include('dbconnect.php');
-
-                //create query
-                $queryPorTipo = "SELECT * FROM universidades WHERE para_estudiantes=true";
-                $queryPorTipo2 = "SELECT * FROM universidades WHERE para_docentes=true";
-
-                $resultPorTipo = mysqli_query($conn, $queryPorTipo);
-                $resultPorTipo2 = mysqli_query($conn, $queryPorTipo2);
-                ?>
-                <!-- Accordion -->
-                <div class="container-fluid bg-gray" id="accordion-style-1"> <!--COMIENZA CONTAINER-FLUID BG-GRAY-->
-                    <div class="container" style="margin-top:80px;"> <!--COMIENZA CONTAINER-->
-                        <div class="row"> <!--COMIENZA ROW-->
-                            <div class="col-10 mx-auto"> <!--COMIENZA col-10 mx-auto-->
-                                <div class="accordion" id="accordionPorTipo"> <!--COMIENZA ACCORDION-->
-                                    <!--CARD 1 - ESTUDIANTES-->
-                                    <div class="card"> <!--COMIENZA CARD-->
-                                        <div class="card-header" id="headingPorTipo1">					
-                                            <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapsePorTipo1" aria-expanded="true" >
-                                                <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>Estudiantes
-                                            </a>			  
-                                        </div>
-                                        <!--CONTENIDO ESTUDIANTES-->
-                                        <div id="collapsePorTipo1" class="collapse"  data-parent="#accordionPorTipo">
-                                            <div class="card-body" style="font-size: 5mm;">
-                                            <?php while($rowPorTipo = mysqli_fetch_assoc($resultPorTipo)){
-                                            
-                                            ?>
-                                                <div class="accordion" id="accordionEstudiantes"> <!--COMIENZA ACCORDION-->
-                                                    <!--ESTUDIANTES-->
-                                                    <div class="card"> <!--COMIENZA CARD-->
-                                                        <div class="card-header" id="headingAngola">				
-                                                            <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapsePorEstudiantes" aria-expanded="false" >
-                                                            <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowPorTipo['nombre']; ?></a>		  
-                                                        </div>
-                                                        <div id="collapsePorEstudiantes" class="collapse" data-parent="#accordionEstudiantes">
-                                                            <div class="card-body" style="font-size: 5mm;">
-                                                                <div><i class="fas fa-circle"></i>País:</br><?php echo $rowPorTipo['pais']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowPorTipo['programas']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowPorTipo['descripcion']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowPorTipo['fecha_habilitada']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowPorTipo['fecha_vencimiento']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowPorTipo['enlace_de_interes']."'>'".$rowPorTipo['enlace_de_interes']."'</a>";?></div>
-                                                            </div>
-                                                        </div>
-                                                    </div> <!--ACABA CARD-->
-                                                </div> <!--ACABA ACCORDION-->
-                                            <?php
-                                            }
-                                            mysqli_close($conn);
-                                            ?>
-                                        </div>
-                                                    
-                                    </div> <!--ACABA CARD-->
-                                
-                                    <!--CARD 2 - DOCENTES-->
-                                    <div class="card"> <!--COMIENZA CARD-->
-                                        <div class="card-header" id="headingTwo">					
-                                            <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapsePorDocentes" aria-expanded="true" >
-                                                <i style="color: #FE4164;" class="fa fa-angle-double-right mr-3"></i>Docentes
-                                            </a>			  
-                                        </div>
-                                        <!--CONTENIDO DOCENTES-->
-                                        <div id="collapsePorDocentes" class="collapse"  data-parent="#accordionPorTipo">
-                                            <div class="card-body" style="font-size: 5mm;">
-                                            <?php while($rowPorTipo2 = mysqli_fetch_assoc($resultPorTipo2)){
-                                            
-                                            ?>
-                                                <div class="accordion" id="accordionPaises233"> <!--COMIENZA ACCORDION-->
-                                                    <!--DOCENTES-->
-                                                    <div class="card"> <!--COMIENZA CARD-->
-                                                        <div class="card-header" id="headingAngola">				
-                                                            <a class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseDocentes" aria-expanded="false" >
-                                                            <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowPorTipo2['nombre']; ?></a>		  
-                                                        </div>
-                                                        <div id="collapseDocentes" class="collapse" data-parent="#accordionPaises233">
-                                                            <div class="card-body" style="font-size: 5mm;">
-                                                                <div><i class="fas fa-circle"></i>País:</br><?php echo $rowPorTipo2['pais']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowPorTipo2['programas']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowPorTipo2['descripcion']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowPorTipo2['fecha_habilitada']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowPorTipo2['fecha_vencimiento']; ?></div>
-                                                                <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowPorTipo2['enlace_de_interes']."'>'".$rowPorTipo2['enlace_de_interes']."'</a>";?></div>
-                                                            </div>
-                                                        </div>
-                                                    </div> <!--ACABA CARD-->
-                                                </div> <!--ACABA ACCORDION-->
-                                            <?php
-                                            }
-                                            mysqli_close($conn);
-                                            ?>
-                                        </div>
-                                                    
-                                    </div> <!--ACABA CARD-->
-
-                                </div> <!--ACABA ACCORDION-->
-                            </div> <!--ACABA col-10 mx-auto-->	
-                        </div> <!--ACABA ROW-->
-                    </div> <!--ACABA CONTAINER-->
-                </div> <!--ACABA CONTAINER-FLUID BG-GRAY-->
-                                <!-- .// Accordion -->
-            </div>
-            </div>
-            </div>
-          </div> <!--ACABA TAB-PANE POR TIPO-->
+          
           
           <!--TAB 7 POR UNIVERSIDAD / INSTITUCION -->
           <div class="tab-pane" id="pag7" role="tabpanel"> <!--COMIENZA TAB-PANE POR UNIVERSIDAD / INSTITUCION-->
