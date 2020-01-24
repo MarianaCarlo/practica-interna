@@ -25,7 +25,7 @@
     <!--LOGIN-->
     <div class="text-center"> <!------TEXT CENTER------->
       <h4 class="bienvenido" font-size="50px">Usted se encuentra en modo ADMINISTRADOR</h4>
-      <form role="form" action="hola.php" method="post">
+      <form role="form" action="controlConvenios.php" method="post">
         <div class="container"><!--COMIENZA CONTAINER-->
           <div class="card border-light mb-3 border-light" style="max-width: 25rem;">
             <div class="card-header text-left ">Código:</div>

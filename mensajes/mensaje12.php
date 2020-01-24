@@ -33,12 +33,12 @@
                                 <i class="fas fa-thumbs-up"></i>
                             </div>
                             <div class="dbox__body">
-                            <span class="dbox__count">SE AÑADIÓ CORRECTAMENTE A ESTE ADMINISTRADOR</span>
-                            <span class="dbox__title">YA PUEDE ACCEDER A LA PÁGINA DE CONTENIDO DE CONVENIOS</span>
+                            <span class="dbox__count">SE ELIMINÓ CORRECTAMENTE ÉSTA UNIVERSIDAD/INSTITUTO</span>
+                            <span class="dbox__title">YA NO SE ENCUENTRA ENTRE LOS CONTENIDOS</span>
                         </div>
                         
                             
-                            <a href="javascript:history.go(-2)"class="dbox__action__btn" role="button"> Volver Atrás</a>
+                            <a href="javascript:history.go(-1)"class="dbox__action__btn" role="button"> Volver Atrás</a>
                         			
                     </div>
                 </div>

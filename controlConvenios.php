@@ -149,7 +149,7 @@
                               <div class="form-group">
                                 <label class="col-2 col-form-label">Código:</label>
                                 <div class="col-10">
-                                  <input type="text" name="codigoAlum" id="codigoAlum" maxlength="5" class="form-control input-lg" placeholder="ingrese codigo" title="máximo 5 numeros" required pattern="[0-9]+" required>
+                                  <input type="text" name="codigoAlum" id="codigoAlum" maxlength="5" class="form-control input-lg" placeholder="Ingrese código" title="máximo 5 números" required pattern="[0-9]+" required>
                 
                                 </div> 
                                 <div class="containerrr" style="margin-top: 20px; margin-left:80px;">      
@@ -262,7 +262,7 @@
                   <div class="tab-pane" id="pag3" role="tabpanel"> <!--COMIENZA TAB-PANE CONVENIOS-->
                     <div class="sv-tab-panel anadir-est">
                       <!--Añadir convenios-->
-                      <div class="card border-dark" style="width: 52rem;"> <!--COMIENZA CARD-BORDER-DARK-->
+                      <div class="card border-dark" style="margin-top: 20px; width: 52rem;"> <!--COMIENZA CARD-BORDER-DARK-->
                         <div class="card-body"> <!--COMIENZA CARD-BODY-->
                           Añadir Convenios:
                           <form class="form-inline" action="anadirUniversidad.php" method="POST">
@@ -453,7 +453,7 @@
                               <div class="form-group">
                                 <label class="col-6 col-form-label">Nombre del programa:</label>
                                 <div class="col-6">
-                                  <input type="text" name="nombrePrograma" id="nombrePrograma" class="form-control input-lg" placeholder="ingrese nombre" required>
+                                  <input type="text" name="nombrePrograma" id="nombrePrograma" class="form-control input-lg" placeholder="Ingrese nombre" required>
                                 </div> 
                               </div>
                             </div> <!--ACABA FORM-INLINE-->
@@ -517,7 +517,7 @@
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['pais']; ?></td>
                 <td>
-                  <a href="editform.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:#FE4164; color: black;" role="button">Editar</a>
+                  <a href="editUniversidad.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:#FE4164; color: black;" role="button">Editar</a>
                   <a href="delete.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:black; color: white;" role="button">Eliminar</a>
                 </td>
             </tr>

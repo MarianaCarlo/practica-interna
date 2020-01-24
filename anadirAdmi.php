@@ -59,6 +59,7 @@
                   
                 } else {
                     echo "no se pudo añadir porque ese codigo ya existe en la base de datos";
+                    header("Location:mensajes/mensaje5.php");
                 }
             }  else {
               echo "Las contraseñas no coinciden";

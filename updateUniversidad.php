@@ -9,9 +9,10 @@
     $fecha_vencimiento = $_GET['fecha_vencimiento'];
     $enlace = $_GET['enlace'];
     $descripciones = $_GET['desc'];
+    $programas = $_GET['programas'];
 
     //create query
-    $query = "UPDATE universidades SET nombre='$nombre' , fecha_firma_convenio='$fecha_firma_convenio', fecha_habilitada='$fecha_habilitada', fecha_vencimiento='$fecha_vencimiento', descripcion='$descripciones', enlace_de_interes='$enlace'  WHERE id_universidad='$id'";
+    $query = "UPDATE universidades SET nombre='$nombre' , fecha_firma_convenio='$fecha_firma_convenio', programas='$programas',fecha_habilitada='$fecha_habilitada', fecha_vencimiento='$fecha_vencimiento', descripcion='$descripciones', enlace_de_interes='$enlace'  WHERE id_universidad='$id'";
 
     if (mysqli_query($conn, $query)) {
         if(isset($_GET['submit_update_uni'])){ 
@@ -23,7 +24,7 @@
             echo "fecha_vencimiento: ".$fecha_vencimiento."</br>";
             echo "enlace: ".$enlace."</br>";
             echo "descr: ".$descripciones."</br>";*/
-            echo "si se pudo actulizar ";
+            echo "si se pudo actulizar";
             header("Location:mensajes/mensaje10.php");      
         } else {
             echo "no se pudo actualizar el convenio";
