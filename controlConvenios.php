@@ -127,7 +127,9 @@
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#pag4" role="tab">Reportes</a>
                   </li>
-                  
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pag000" role="tab">Vencimientos</a>
+                  </li>
                   
                   
                 </ul> <!--ACABA NAV NAV-TABS-->
@@ -467,14 +469,56 @@
                     </div>
                   </div> <!--ACABA TAB-PANE PROGRAMAS-->
                   <!--CERRANDO AÑADIENDO PROGRAMAS-->
-                  <!-----------------------TAB 000 - MENSAJES----------------------------->
-                  <div class="tab-pane" id="pag000" role="tabpanel"> <!--COMIENZA TAB-PANE MENSAJES-->
+                  <!-----------------------TAB 000 - VENCIMIENTOS----------------------------->
+                  <div class="tab-pane" id="pag000" role="tabpanel"> <!--COMIENZA TAB-PANE VENCIMIENTOS-->
                     <div class="sv-tab-panel anadir-est">
-                    
-                    <h3>HOLA MENSAJES</h3>
+                      <?php
+                      include('dbconnect.php');
+
+                      $queryVencimientos = "SELECT * FROM universidades WHERE fecha_vencimiento between date_sub(curdate(), interval 30 day) and curdate();";
+                      $resultVencimientos =  mysqli_query($conn, $queryVencimientos);
+                      
+                      ?>
+                      <!--PARA PHP-->
+                      
+                        <h3>VENCIMIENTOS DE CONVENIOS</h3>
+                        <div class="row" style="margin-left:-43px;">
+                          <div class="col-sm-12">
+                            <table class="table" style="font-size: 5mm;">
+                              <thead style="background: #FE4164;">
+                                <tr>
+                                  <th>UNIVERSIDAD O INSTITUTO</th>
+                                  <th>Fecha de Vencimiento</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <?php
+                                  while($rowVencimientos = mysqli_fetch_assoc($resultVencimientos)){
+                                    
+                                ?>
+                                <tr>
+                                  <td style="background: #424242; color: white;"><?php echo $rowVencimientos['nombre']; ?></td>
+                                  <td style="background: #424242;color: white; text-align: center;"><?php echo $rowVencimientos['fecha_vencimiento']; ?></td>
+                                  
+                              </tr>
+                              <?php
+
+                                }
+
+                                mysqli_close($conn);
+
+                              ?>
+                              </tbody>
+                            </table>
+                            <!---->
+                          </div>
+                        </div>
+                      
+                      
+
                     </div>
-                  </div> <!--ACABA TAB-PANE MENSAJES-->
-                  <!------------------ACABA LA TAB DE MENSAJES-------->
+                  </div> <!--ACABA TAB-PANE VENCIMIENTOS-->
+                  <!------------------ACABA LA TAB DE VENCIMIENTOS-------->
 
                   </div> <!--ACABA TAB-CONTENT-->
                 </div> <!--ACABA VERITCAL-TABS-->
