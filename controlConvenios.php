@@ -119,17 +119,17 @@
                     <a class="nav-link" data-toggle="tab" href="#pag3" role="tab">Añadir convenios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#pag4" role="tab">Reportes</a>
+                    <a class="nav-link" data-toggle="tab" href="#pag00" role="tab">Añadir programas</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#pag0" role="tab">Perfil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#pag00" role="tab">Añadir programas</a>
+                    <a class="nav-link" data-toggle="tab" href="#pag4" role="tab">Reportes</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#pag000" role="tab">Mensajes</a>
-                  </li>
+                  
+                  
+                  
                 </ul> <!--ACABA NAV NAV-TABS-->
                 <!--BAR VERTICAL-->
                 <div class="tab-content"> <!--COMIENZA TAB-CONTENT-->
@@ -170,7 +170,7 @@
                           <div id="popupAlumno" class="overlay"> <!--COMIENZA POPUPALUMNO-->
                             <div class="popup" style="margin-top:100px;"> <!--COMIENZA POPUP-->
                               <div class="title-popup">Añadir Alumno/Docente:</div>
-                              <a class="close" href="#">×</a>
+                              
                               <div class="content"> <!--COMIENZA CONTENT-->
                                 ¿Estas seguro que quieres añadir a este alumno/docente?
                                 <ul >
@@ -239,14 +239,14 @@
                             <div id="popupAdmin" class="overlay"> <!--COMIENZA POPUPADMIN-->
                               <div class="popup"> <!--COMIENZA POPUP-->
                                 <div class="title-popup">Añadir Administrador:</div>
-                                <a class="close" href="#">×</a>
+                                
                                 <div class="content"> <!--COMIENZA CONTENT-->
                                   ¿Estas seguro que quieres añadir a Administrador:?
                                   <ul >
                                     <div class="modal-footer">
                                       
-                                      <button type="submit" name="submit_anadir_admi" class="btn boton-info" style="background: green; color: white;">Guardar</button>
-                                      <a href="#formularioAdmin" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
+                                      <button type="submit" name="submit_anadir_admi" class="btn" style="background: #FE4164; color: white;">Guardar</button>
+                                      <a href="#formularioAdmin" type="button" class="btn" style="background: #424242; color: white;" data-dismiss="modal">Cancelar</a>
                                     </div>
                                   </ul>
                                 </div> <!--ACABA CONTENT-->

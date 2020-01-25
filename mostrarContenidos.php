@@ -143,18 +143,45 @@
                                   <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowresultContinente22['nombre']; ?></a>		  
                               </div>
                               <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                <div class="card-body" style="font-size: 5mm;">
-                                  <div><i class="fas fa-circle"></i>País:</br><?php echo $rowresultContinente22['pais']; ?></div>
-                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                  <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowresultContinente22['programas']; ?></div>
-                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                  <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowresultContinente22['descripcion']; ?></div>
-                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                  <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowresultContinente22['fecha_habilitada']; ?></div>
-                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                  <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowresultContinente22['fecha_vencimiento']; ?></div>
-                                  <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                  <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowresultContinente22['enlace_de_interes']."'>'".$rowresultContinente22['enlace_de_interes']."'</a>";?></div>
+                                <div class="card-body" style="font-size: 4mm;">
+                                  <!--PRIMERA LINEA-->
+                                  <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                  <div class="row"> <!--COMIENZA ROW-->
+                                    <div class="col-md-1">
+                                      <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                    </div>
+                                    <div class="col-md-5"> <!--PAIS-->
+                                      <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowresultContinente22['pais']; ?></div>
+                                    </div>
+                                    <div class="col-md-1">
+                                      <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                    </div>
+                                    <div class="col-md-5"> <!--PROGRAMAS-->
+                                    <div style="font-size: 5mm;"><?php echo $rowresultContinente22['programas']; ?></div>
+                                    </div>
+                                    <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                    <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                    <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                  </div> <!--ACABA ROW-->
+                                  <!--SEGUNDA LINEA-->
+                                  <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                  <div class="row"> <!--COMIENZA ROW-->
+                                    <div class="col-md-1">
+                                      <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                    </div>
+                                    <div class="col-md-5"> <!--DESCRIPCION-->
+                                      <div style="font-size: 5mm; "><?php echo $rowresultContinente22['descripcion']; ?></div>
+                                    </div>
+                                    <div class="col-md-1">
+                                      <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                    </div>
+                                    <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                    <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowresultContinente22['enlace_de_interes']."'>".$rowresultContinente22['enlace_de_interes']."</a>";?></div>
+                                    </div>
+                                    <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                    <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                    <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                  </div> <!--ACABA ROW-->
                                 </div>
                               </div>
                             </div> <!--ACABA CARD-->
@@ -238,19 +265,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowA['pais'] . " - ".$rowA['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowA['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowA['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowA['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowA['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowA['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowA['enlace_de_interes']."'>'".$rowA['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowA['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowA['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowA['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowA['enlace_de_interes']."'>".$rowA['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -292,19 +345,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowB['pais'] . " - ".$rowB['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowB['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowB['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowB['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowB['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowB['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowB['enlace_de_interes']."'>'".$rowB['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowB['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowB['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowB['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowB['enlace_de_interes']."'>".$rowB['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->     
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -346,19 +425,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowC['pais'] . " - ".$rowC['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowC['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowC['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowC['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%; "></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowC['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowC['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowC['enlace_de_interes']."'>'".$rowC['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowC['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowC['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowC['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowC['enlace_de_interes']."'>".$rowC['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -400,19 +505,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowD['pais'] . " - ".$rowD['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowD['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowD['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowD['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowD['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowD['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowD['enlace_de_interes']."'>'".$rowD['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                       <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowD['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowD['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowD['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowD['enlace_de_interes']."'>".$rowD['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->     
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -454,19 +585,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowE['pais'] . " - ".$rowE['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowE['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowE['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowE['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowE['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowE['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowE['enlace_de_interes']."'>'".$rowE['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowE['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowE['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowE['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowE['enlace_de_interes']."'>".$rowE['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->     
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -508,19 +665,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowF['pais'] . " - ".$rowF['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowF['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowF['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowF['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowF['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowF['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowF['enlace_de_interes']."'>'".$rowF['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowF['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowF['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowF['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowF['enlace_de_interes']."'>".$rowF['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->    
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -562,19 +745,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowG['pais'] . " - ".$rowG['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowG['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowG['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowG['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowG['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowG['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowG['enlace_de_interes']."'>'".$rowG['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowG['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowG['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowG['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowG['enlace_de_interes']."'>".$rowG['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -616,19 +825,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowH['pais'] . " - ".$rowH['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowH['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowH['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowH['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowH['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowH['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowH['enlace_de_interes']."'>'".$rowH['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowH['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowH['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowH['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowH['enlace_de_interes']."'>".$rowH['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->     
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -670,19 +905,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowI['pais'] . " - ".$rowI['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowI['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowI['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowI['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowI['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowI['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowI['enlace_de_interes']."'>'".$rowI['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowI['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowI['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowI['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowI['enlace_de_interes']."'>".$rowI['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->       
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -724,19 +985,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowJ['pais'] . " - ".$rowJ['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowJ['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowJ['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowJ['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowJ['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowJ['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowJ['enlace_de_interes']."'>'".$rowJ['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowJ['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowJ['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowJ['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowJ['enlace_de_interes']."'>".$rowJ['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -778,19 +1065,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowK['pais'] . " - ".$rowK['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowK['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowK['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowK['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowK['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowK['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowK['enlace_de_interes']."'>'".$rowK['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowK['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowK['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowK['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowK['enlace_de_interes']."'>".$rowK['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -832,19 +1145,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowL['pais'] . " - ".$rowL['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowL['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowL['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowL['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowL['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowL['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowL['enlace_de_interes']."'>'".$rowL['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowL['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowL['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowL['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowL['enlace_de_interes']."'>".$rowL['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -886,19 +1225,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowM['pais'] . " - ".$rowM['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowM['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowM['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowM['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowM['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowM['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowM['enlace_de_interes']."'>'".$rowM['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowM['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowM['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowM['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowM['enlace_de_interes']."'>".$rowM['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -940,19 +1305,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowN['pais'] . " - ".$rowN['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowN['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowN['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowN['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowN['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowN['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowN['enlace_de_interes']."'>'".$rowN['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowN['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowN['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowN['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowN['enlace_de_interes']."'>".$rowN['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->     
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -994,19 +1385,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowO['pais'] . " - ".$rowO['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowO['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowO['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowO['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowO['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowO['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowO['enlace_de_interes']."'>'".$rowO['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowO['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowO['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowO['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowO['enlace_de_interes']."'>".$rowO['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1048,19 +1465,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowP['pais'] . " - ".$rowP['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowP['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowP['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowP['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowP['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowP['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowP['enlace_de_interes']."'>'".$rowP['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowP['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowP['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowP['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowP['enlace_de_interes']."'>".$rowP['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->       
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1102,19 +1545,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowQ['pais'] . " - ".$rowQ['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowQ['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowQ['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowQ['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowQ['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowQ['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowQ['enlace_de_interes']."'>'".$rowQ['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowQ['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowQ['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowQ['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowQ['enlace_de_interes']."'>".$rowQ['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->    
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1156,19 +1625,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowR['pais'] . " - ".$rowR['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowR['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowR['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowR['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowR['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowR['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowR['enlace_de_interes']."'>'".$rowR['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowR['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowR['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowR['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowR['enlace_de_interes']."'>".$rowR['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1210,19 +1705,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowS['pais'] . " - ".$rowS['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowS['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowS['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowS['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowS['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowS['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowS['enlace_de_interes']."'>'".$rowS['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowS['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowS['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowS['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowS['enlace_de_interes']."'>".$rowS['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->       
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1264,19 +1785,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowT['pais'] . " - ".$rowT['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowT['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowT['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowT['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowT['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowT['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowT['enlace_de_interes']."'>'".$rowT['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowT['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowT['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowT['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowT['enlace_de_interes']."'>".$rowT['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1318,19 +1865,43 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowU['pais'] . " - ".$rowU['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowU['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowU['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowU['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowU['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowU['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowU['enlace_de_interes']."'>'".$rowU['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">                                                          <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowU['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowU['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowU['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowU['enlace_de_interes']."'>".$rowU['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1372,19 +1943,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowV['pais'] . " - ".$rowV['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowV['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowV['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowV['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowV['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowV['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowV['enlace_de_interes']."'>'".$rowV['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowV['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowV['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowV['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowV['enlace_de_interes']."'>".$rowV['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1426,19 +2023,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowW['pais'] . " - ".$rowW['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowW['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowW['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowW['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowW['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowW['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowW['enlace_de_interes']."'>'".$rowW['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowW['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowW['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowW['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowW['enlace_de_interes']."'>".$rowW['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->        
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1480,19 +2103,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowX['pais'] . " - ".$rowX['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowX['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowX['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowX['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowX['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowX['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowX['enlace_de_interes']."'>'".$rowX['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowX['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowX['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowX['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowX['enlace_de_interes']."'>".$rowX['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1534,19 +2183,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowY['pais'] . " - ".$rowY['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowY['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowY['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowY['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowY['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowY['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowY['enlace_de_interes']."'>'".$rowY['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowY['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowY['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowY['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowY['enlace_de_interes']."'>".$rowY['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->      
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1588,19 +2263,45 @@
                                                                     <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowZ['pais'] . " - ".$rowZ['nombre'] ; ?></a>		  
                                                                 </div>
                                                                 <div id="collapseAngola6" class="collapse" data-parent="#accordionUni">
-                                                                    <div class="card-body" style="font-size: 5mm;">
-                                                                        <div><i class="fas fa-circle"></i>País:</br><?php echo $rowZ['pais']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowZ['programas']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowZ['descripcion']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowZ['fecha_habilitada']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowZ['fecha_vencimiento']; ?></div>
-                                                                        <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                                        <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowZ['enlace_de_interes']."'>'".$rowZ['enlace_de_interes']."'</a>";?></div>
-                                                                                
+                                                                    <div class="card-body" style="font-size: 4mm;">
+                                                                        <!--PRIMERA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PAIS-->
+                                                                            <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowZ['pais']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--PROGRAMAS-->
+                                                                          <div style="font-size: 5mm;"><?php echo $rowZ['programas']; ?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->
+                                                                        <!--SEGUNDA LINEA-->
+                                                                        <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                                        <div class="row"> <!--COMIENZA ROW-->
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--DESCRIPCION-->
+                                                                            <div style="font-size: 5mm; "><?php echo $rowZ['descripcion']; ?></div>
+                                                                          </div>
+                                                                          <div class="col-md-1">
+                                                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                                          </div>
+                                                                          <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowZ['enlace_de_interes']."'>".$rowZ['enlace_de_interes']."</a>";?></div>
+                                                                          </div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                                          <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                                        </div> <!--ACABA ROW-->     
                                                                     </div>
                                                                 </div>
                                                             </div> <!--ACABA CARD-->
@@ -1672,18 +2373,45 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowresultContinente1['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola" class="collapse" data-parent="#accordionPaises">
-                                                <div class="card-body" style="font-size: 5mm;">
-                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowresultContinente1['pais']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowresultContinente1['programas']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowresultContinente1['descripcion']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowresultContinente1['fecha_habilitada']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowresultContinente1['fecha_vencimiento']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowresultContinente1['enlace_de_interes']."'>'".$rowresultContinente1['enlace_de_interes']."'</a>";?></div>
+                                                <div class="card-body" style="font-size: 4mm;">
+                                                    <!--PRIMERA LINEA-->
+                                                    <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PAIS-->
+                                                        <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowresultContinente1['pais']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PROGRAMAS-->
+                                                      <div style="font-size: 5mm;"><?php echo $rowresultContinente1['programas']; ?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
+                                                    <!--SEGUNDA LINEA-->
+                                                    <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--DESCRIPCION-->
+                                                        <div style="font-size: 5mm; "><?php echo $rowresultContinente1['descripcion']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowresultContinente1['enlace_de_interes']."'>".$rowresultContinente1['enlace_de_interes']."</a>";?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -1717,18 +2445,45 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente2['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola2" class="collapse" data-parent="#accordionPaises2">
-                                                <div class="card-body" style="font-size: 5mm;">
-                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente2['pais']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente2['programas']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente2['descripcion']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente2['fecha_habilitada']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente2['fecha_vencimiento']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente2['enlace_de_interes']."'>'".$rowContinente2['enlace_de_interes']."'</a>";?></div>
+                                                <div class="card-body" style="font-size: 4mm;">
+                                                    <!--PRIMERA LINEA-->
+                                                    <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PAIS-->
+                                                        <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowContinente2['pais']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PROGRAMAS-->
+                                                      <div style="font-size: 5mm;"><?php echo $rowContinente2['programas']; ?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
+                                                    <!--SEGUNDA LINEA-->
+                                                    <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--DESCRIPCION-->
+                                                        <div style="font-size: 5mm; "><?php echo $rowContinente2['descripcion']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente2['enlace_de_interes']."'>".$rowContinente2['enlace_de_interes']."</a>";?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -1762,18 +2517,45 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente3['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola3" class="collapse" data-parent="#accordionPaises3">
-                                                <div class="card-body" style="font-size: 5mm;">
-                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente3['pais']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente3['programas']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente3['descripcion']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente3['fecha_habilitada']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente3['fecha_vencimiento']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente3['enlace_de_interes']."'>'".$rowContinente3['enlace_de_interes']."'</a>";?></div>
+                                                <div class="card-body" style="font-size: 4mm;">
+                                                    <!--PRIMERA LINEA-->
+                                                    <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PAIS-->
+                                                        <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowContinente3['pais']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PROGRAMAS-->
+                                                      <div style="font-size: 5mm;"><?php echo $rowContinente3['programas']; ?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
+                                                    <!--SEGUNDA LINEA-->
+                                                    <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--DESCRIPCION-->
+                                                        <div style="font-size: 5mm; "><?php echo $rowContinente3['descripcion']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente3['enlace_de_interes']."'>".$rowContinente3['enlace_de_interes']."</a>";?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -1807,18 +2589,45 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente4['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola4" class="collapse" data-parent="#accordionPaises4">
-                                                <div class="card-body" style="font-size: 5mm;">
-                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente4['pais']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente4['programas']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente4['descripcion']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente4['fecha_habilitada']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente4['fecha_vencimiento']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente4['enlace_de_interes']."'>'".$rowContinente4['enlace_de_interes']."'</a>";?></div>
+                                                <div class="card-body" style="font-size: 4mm;">
+                                                    <!--PRIMERA LINEA-->
+                                                    <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PAIS-->
+                                                        <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowContinente4['pais']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PROGRAMAS-->
+                                                      <div style="font-size: 5mm;"><?php echo $rowContinente4['programas']; ?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
+                                                    <!--SEGUNDA LINEA-->
+                                                    <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--DESCRIPCION-->
+                                                        <div style="font-size: 5mm; "><?php echo $rowContinente4['descripcion']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente4['enlace_de_interes']."'>".$rowContinente4['enlace_de_interes']."</a>";?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->
@@ -1852,18 +2661,45 @@
                                                 <i class="fa fa-angle-double-right mr-3"></i><?php echo $rowContinente5['nombre']; ?></a>		  
                                             </div>
                                             <div id="collapseAngola5" class="collapse" data-parent="#accordionPaises5">
-                                                <div class="card-body" style="font-size: 5mm;">
-                                                    <div><i class="fas fa-circle"></i>País:</br><?php echo $rowContinente5['pais']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Programas:</br><?php echo $rowContinente5['programas']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Descripción:</br><?php echo $rowContinente5['descripcion']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Se encuentra desde:</br><?php echo $rowContinente5['fecha_habilitada']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Este convenio vence en:</br><?php echo $rowContinente5['fecha_vencimiento']; ?></div>
-                                                    <div style="height: 2px;background-color: #FE4164;width: 50%;"></div>
-                                                    <div><i class="fas fa-circle"></i>Enlaces de interés:</br><?php echo "<a href='".$rowContinente5['enlace_de_interes']."'>'".$rowContinente5['enlace_de_interes']."'</a>";?></div>
+                                                <div class="card-body" style="font-size: 4mm;">
+                                                    <!--PRIMERA LINEA-->
+                                                    <label style="color:black; font-size: 5mm;">País:</label><label style="margin-left:420px;color:black; font-size: 5mm;">Programas:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-globe-americas fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PAIS-->
+                                                        <div style="font-size: 5mm; margin-top:10px;"><?php echo $rowContinente5['pais']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--PROGRAMAS-->
+                                                      <div style="font-size: 5mm;"><?php echo $rowContinente5['programas']; ?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
+                                                    <!--SEGUNDA LINEA-->
+                                                    <label style="color:black; font-size: 5mm; margin-top:12px;">Descripción:</label><label style="margin-left:355px;color:black; font-size: 5mm; margin-top:12px;">Enlace de interés:</label>
+                                                    <div class="row"> <!--COMIENZA ROW-->
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--DESCRIPCION-->
+                                                        <div style="font-size: 5mm; "><?php echo $rowContinente5['descripcion']; ?></div>
+                                                      </div>
+                                                      <div class="col-md-1">
+                                                        <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                                      </div>
+                                                      <div class="col-md-5"> <!--ENLACE DE INTERES-->
+                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente5['enlace_de_interes']."'>".$rowContinente5['enlace_de_interes']."</a>";?></div>
+                                                      </div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
+                                                      <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                                    </div> <!--ACABA ROW-->
                                                 </div>
                                             </div>
                                         </div> <!--ACABA CARD-->

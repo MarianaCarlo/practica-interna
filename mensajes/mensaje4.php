@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link href="css_mensajes/mensaje2.css" rel="stylesheet" >
+    <link href="css_mensajes/mensaje4.css" rel="stylesheet" >
     <!--JS-->
     <title>contenido de convenios</title>
   </head>
@@ -38,7 +38,7 @@
                         </div>
                         
                             
-                            <a href="javascript:history.go(-1)"class="dbox__action__btn" role="button"> Volver Atrás</a>
+                            <a href="javascript:history.go(-2)"class="dbox__action__btn" role="button"> Volver Atrás</a>
                         			
                     </div>
                 </div>
