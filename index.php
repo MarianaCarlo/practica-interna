@@ -33,7 +33,7 @@
 
     <div class="container"><!---------------CONTAINER PARA CAROUSEL----------->
       <!--SLIDER CAROUSEL-->
-      <div class="container text-center">
+        <div class="container text-center">
           <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
             <ol class="carousel-indicators">
               <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
@@ -54,16 +54,15 @@
                 <div class="carousel-caption"></div>
               </div>
             </div>
-          <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-
-          <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div> 
+            <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div> 
           <!-- Bienvenido-->
           <h4>Bienvenido a la página oficial de contenidos de convenios de la Universidad Privada Boliviana</h4>
           <h6>.</h6>

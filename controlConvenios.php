@@ -205,7 +205,7 @@
                                 <!--NOMBRE DEL ADMINISTRADOR-->
                                 <label class="col-6 col-form-label">Nombre del admnistrador:</label>
                                 <div class="col-6">
-                                  <input type="text" name="admnistradorNuevo" id="nombre_administrador" class="input-group-lg" placeholder="Ej. Mariana" title="nombre de usuario" required pattern="[_a-zA-Z0-9-]+" required/>
+                                  <input type="text" name="admnistradorNuevo" id="nombre_administrador" class="input-group-lg" placeholder="Ej. Mariana" title="nombre de usuario" required/>
                                 </div> 
                                 <!--CAMPUS-->
                                 <label for="exampleSelect1" class="col-6 col-form-label text-left">Campus:</label>
@@ -437,7 +437,7 @@
                           </div> <!--ACABA INPUT-CODIGO-->
                         </div>
                       </div> <!--ACABA CARD-->
-                      <a href = "logout.php" tite = "Logout" style="margin-left: 420px;" class="btn boton-anadir-admin" aria-pressed="true">Cerrar sesion</a>
+                      <a href = "logout.php" tite = "Logout" style="margin-left: 420px;" class="btn boton-anadir-admin" aria-pressed="true">Cerrar sesión</a>
                     </div>
                   </div> <!--ACABA TAB-PANE PERFIL-->
                   <!--cerrando perfil-->

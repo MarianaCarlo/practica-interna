@@ -4,6 +4,8 @@
 
     $codigo = $_POST['codigo'];
     $campus = $_POST['campus_select'];
+    $campusSeleccionado = null;
+    $ciudad = null;
 
     $query_estudiantes = "SELECT * FROM estudiantes WHERE codigo_estudiante='$codigo'";
     $query_docentes = "SELECT * FROM docentes WHERE codigo_docente='$codigo'";
@@ -38,7 +40,9 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='1' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con La Paz";
-                        header("Location:contenidosEstudiantes.php?id=$codigo");
+                        $campusSeleccionado = "Fernando Illanes de la Riva";
+                        $ciudad = "La Paz";
+                        header("Location:contenidosEstudiantes.php?id=$codigo&campus=$campusSeleccionado&ciudad=$ciudad");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -49,7 +53,9 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='2' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con Cochabamba";
-                        header("Location:contenidosEstudiantes.php?id=$codigo");
+                        $campusSeleccionado = "Julio León Prado";
+                        $ciudad = "Cochabamba";
+                        header("Location:contenidosEstudiantes.php?id=$codigo&campus=$campusSeleccionado&ciudad=$ciudad");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -59,7 +65,9 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='3' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con Santa Cruz";
-                        header("Location:contenidosEstudiantes.php?id=$codigo");
+                        $campusSeleccionado = "Campus Santa Cruz";
+                        $ciudad = "Santa Cruz";
+                        header("Location:contenidosEstudiantes.php?id=$codigo&campus=$campusSeleccionado&ciudad=$ciudad");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -72,7 +80,9 @@
                     $queryDocente = "UPDATE docentes SET campus='1' WHERE codigo_docente='$codigo';";
                     if (mysqli_query($conn, $queryDocente)) {
                         echo "estas logueado con La Paz";
-                        header("Location:contenidosDocentes.php?id=$codigo");
+                        $campusSeleccionado = "Fernando Illanes de la Riva";
+                        $ciudad = "La Paz";
+                        header("Location:contenidosDocentes.php?id=$codigo&campus=$campusSeleccionado&ciudad=$ciudad");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -83,7 +93,9 @@
                     $queryDocente = "UPDATE docentes SET campus='2' WHERE codigo_docente='$codigo';";
                     if (mysqli_query($conn, $queryDocente)) {
                         echo "estas logueado con Cochabamba";
-                        header("Location:contenidosDocentes.php?id=$codigo");
+                        $campusSeleccionado = "Julio León Prado";
+                        $ciudad = "Cochabamba";
+                        header("Location:contenidosDocentes.php?id=$codigo&campus=$campusSeleccionado&ciudad=$ciudad");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -93,7 +105,9 @@
                     $queryDocente = "UPDATE docentes SET campus='3' WHERE codigo_docente='$codigo';";
                     if (mysqli_query($conn, $queryDocente)) {
                         echo "estas logueado con Santa Cruz";
-                        +header("Location:contenidosDocentes.php?id=$codigo");
+                        $campusSeleccionado = "Campus Santa Cruz";
+                        $ciudad = "Santa Cruz";
+                        header("Location:contenidosDocentes.php?id=$codigo&campus=$campusSeleccionado&ciudad=$ciudad");
                     } else {
                         echo "no puedes acceder";
                     }
