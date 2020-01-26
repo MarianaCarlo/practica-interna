@@ -38,7 +38,7 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='1' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con La Paz";
-                        header("Location:mostrarContenidos.php");
+                        header("Location:mostrarContenidos.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }

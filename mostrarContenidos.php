@@ -37,7 +37,7 @@
   <?php
     //$idAdmin = $_GET['codigo'];
     //add dbconnect
-    
+    $id = $_GET['id'];
     include ('dbconnect.php');
     
     $code = $_POST['codigo'];
@@ -96,7 +96,7 @@
             <div class="sv-tab-panel titulo-por-universidad" style="margin-top:20px;">
                 <div class="card border-dark" id="formularioEst" style="width: 72rem;"> <!--COMIENZA CARD BORDER-DARK-->
                     <div class="card-body "> <!--COMIENZA CARD-BODY-->
-                        Bienvenido a la página del contenido de convenios del departamento de Internacionalización:
+                        Bienvenido <?php echo "$id";?> a la página del contenido de convenios del departamento de Internacionalización:
                         <div class="texto-introducir-codigo">
                             En ésta página encontrarás los diferentes convenios que la Universidad Privada Bolivana te ofrece, ya 
                             seas estudiante o docente, te podrás informar sobre los programas como ser:

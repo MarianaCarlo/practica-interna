@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
     <link href="css/admin.css" rel="stylesheet" >
+    <link href="css/sinVencimientos.css" rel="stylesheet" >
     <link href="css/radiobutton.css" rel="stylesheet" >
     <link href="css/toastr.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
@@ -477,18 +478,24 @@
 
                       $queryVencimientos = "SELECT * FROM universidades WHERE fecha_vencimiento between date_sub(curdate(), interval 30 day) and curdate();";
                       $resultVencimientos =  mysqli_query($conn, $queryVencimientos);
+                      $resultCheckVencimientos = mysqli_num_rows($resultVencimientos);
                       
                       ?>
                       <!--PARA PHP-->
                       
                         <h3>VENCIMIENTOS DE CONVENIOS</h3>
-                        <div class="row" style="margin-left:-43px;">
+                        <?php
+                        if ($resultCheckVencimientos > 0) {
+                          
+                        
+                        ?>
+                        <div class="row" style="margin-left:-63px;">
                           <div class="col-sm-12">
-                            <table class="table" style="font-size: 5mm;">
-                              <thead style="background: #FE4164;">
+                            <table class="table table-bordered" style="font-size: 5mm;">
+                              <thead style="background: #FA5573;">
                                 <tr>
-                                  <th>UNIVERSIDAD O INSTITUTO</th>
-                                  <th>Fecha de Vencimiento</th>
+                                  <th style="color: #FFF;">UNIVERSIDAD O INSTITUTO</th>
+                                  <th style="color: #FFF;">Fecha de Vencimiento</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -497,8 +504,8 @@
                                     
                                 ?>
                                 <tr>
-                                  <td style="background: #424242; color: white;"><?php echo $rowVencimientos['nombre']; ?></td>
-                                  <td style="background: #424242;color: white; text-align: center;"><?php echo $rowVencimientos['fecha_vencimiento']; ?></td>
+                                  <td style="background: #616161; color: white;"><?php echo $rowVencimientos['nombre']; ?></td>
+                                  <td style="background: #616161;color: white; text-align: center;"><?php echo $rowVencimientos['fecha_vencimiento']; ?></td>
                                   
                               </tr>
                               <?php
@@ -513,7 +520,27 @@
                             <!---->
                           </div>
                         </div>
-                      
+                      <?php
+                        } else {
+                          ?>
+                          
+                          <div class="row justify-content-md-center">
+                            <div class="col-md-10">
+                              <div class="dbox dbox--color-1">
+                                <div class="dbox__icon">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <div class="dbox__body">
+                                  <span class="dbox__count">NO HAY VENCIMIENTOS HASTA AHORA</span>
+                                  <span class="dbox__title">TODOS LOS CONVENIOS ESTÁN AL DÍA</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <?php
+                        }
+                      ?>
                       
 
                     </div>

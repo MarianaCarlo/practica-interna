@@ -25,24 +25,21 @@
   <body>
       
     <div class="container">
-            <form role="form">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-5">
-                        <div class="dbox dbox--color-1">
-                            <div class="dbox__icon">
-                                <i class="fas fa-thumbs-up"></i>
-                            </div>
-                            <div class="dbox__body">
-                            <span class="dbox__count">SE AÑADIÓ CORRECTAMENTE A ESTE ADMINISTRADOR</span>
-                            <span class="dbox__title">YA PUEDE ACCEDER A LA PÁGINA DE CONTENIDO DE CONVENIOS</span>
-                        </div>
-                        
-                            
-                            <a href="javascript:history.go(-2)"class="dbox__action__btn" role="button"> Volver Atrás</a>
-                        			
-                    </div>
-                </div>
-            </form>
+      <form role="form">
+        <div class="row justify-content-md-center">
+          <div class="col-md-5">
+            <div class="dbox dbox--color-1">
+              <div class="dbox__icon">
+                  <i class="fas fa-thumbs-up"></i>
+              </div>
+              <div class="dbox__body">
+              <span class="dbox__count">SE AÑADIÓ CORRECTAMENTE A ESTE ADMINISTRADOR</span>
+              <span class="dbox__title">YA PUEDE ACCEDER A LA PÁGINA DE CONTENIDO DE CONVENIOS</span>
+            </div>
+            <a href="javascript:history.go(-2)"class="dbox__action__btn" role="button"> Volver Atrás</a>		
+          </div>
+        </div>
+      </form>
     </div>
     
     <!-- Optional JavaScript -->
