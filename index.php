@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link href="css/custom.css" rel="stylesheet" >
+    <link href="css/index.css" rel="stylesheet" >
     <!--JS-->
     <script type="text/javascript">
         history.pushState(null, null, location.href);
@@ -74,15 +74,15 @@
         <form role="form" action="validacion.php" method="post">
           <div class="container"><!--COMIENZA CONTAINER-->
             <div class="card border-light mb-3 border-light" style="max-width: 25rem;">
-              <div class="card-header text-left ">Código:</div>
+              <div class="card-header text-left font-weight-bold" style="font-size: 4.7mm;">Código:</div>
               <div class="card-body" style="margin-bottom: -20px; margin-top: -10px;">
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-3">
-                      <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:#7c6c35"></i><i class="fas fa-user fa-stack-1x fa-inverse"></i></span>
+                      <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color: black"></i><i class="fas fa-user fa-stack-1x fa-inverse"></i></span>
                     </div>
                     <div class="col-md-9">
-                      <input style="margin-top: 10px;" type="text" name="codigo" id="codigo" maxlength="5" class="form-control input-lg" placeholder="ingrese codigo" title="máximo 5 numeros" required pattern="[0-9]+" required>
+                      <input style="margin-top: 10px;" type="text" name="codigo" id="codigo" maxlength="5" class="form-control input-lg" placeholder="Ingrese código" title="Máximo 5 números" required pattern="[0-9]+" required>
                     </div>
                   </div> <!--ACABA ROW-->
                 </div><!--ACABA FORM-GROUP-->
@@ -91,12 +91,12 @@
             </div><!--ACABA CARD BORDER-->
 
             <div class="card border-light mb-3 border-light" style="max-width: 25rem;">
-              <div class="card-header text-left ">Campus:</div>
+              <div class="card-header text-left font-weight-bold" style="font-size: 4.7mm;">Campus:</div>
               <div class="card-body" style="margin-bottom: -20px; margin-top: -10px;">
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-3">
-                      <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:#7c6c35"></i><i class="fas fa-university fa-stack-1x fa-inverse"></i></span>
+                      <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i class="fas fa-university fa-stack-1x fa-inverse"></i></span>
                     </div>
                     <div class="col-md-9">
                       <select name="campus_select" class="selectpicker" style="margin-top: 20px;">

@@ -1,0 +1,53 @@
+h4 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+html,body{
+    /*background-image: url('https://i.ibb.co/48RywGy/pru.png');*/
+    background-image: url('https://i.ibb.co/jf98vLn/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.card { 
+    background-color: rgb(255, 0, 128); opacity: 0.8; 
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+
+}
+.card-header {
+    color:whitesmoke;
+}
+
+
+.boton-circle{
+    color: white;
+    background: black;
+    border-radius: 20px;
+    border-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: larger;
+}
+
+/*.card { 
+    background-color: rgba(194, 176, 176, 0.4); 
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+}*/
+
+

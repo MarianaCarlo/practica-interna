@@ -1,9 +1,13 @@
 h4 {
     font-family: 'Rubik', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 17px;
 }
 
 h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 7.5mm;
+    text-align: center;
 }
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -18,7 +22,7 @@ html,body{
 }
 
 .card { 
-    background-color: rgb(255, 0, 128); opacity: 0.6; 
+    background-color: rgb(255, 0, 128); opacity: 1; 
     margin: 0 auto; 
     float: none; 
     margin-bottom: 10px; 
@@ -63,10 +67,9 @@ html,body{
     background: black;
     border-radius: 40px;
     border-color: black;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: xx-large;
-    position: absolute;
-    left: 610px;
-    top: 460.0px;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin-left: 500px;
 }

@@ -7,20 +7,21 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/login.css" rel="stylesheet">
+    <link href="css/login1.css" rel="stylesheet">
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>contenido de convenios</title>
   </head>
   <body>
     <div class="container">
     
       <!-- Bienvenido-->
-      <h2>Bienvenido a la página oficial de contenidos de convenios de la Universidad Privada Boliviana</h2>
+      <h3>Bienvenido a la página oficial de contenidos de convenios de la Universidad Privada Boliviana</h3>
     
     <!--LOGIN-->
     <div class="text-center"> <!------TEXT CENTER------->
@@ -28,32 +29,32 @@
       <form role="form" action="controlConvenios.php" method="post">
         <div class="container"><!--COMIENZA CONTAINER-->
           <div class="card border-light mb-3 border-light" style="max-width: 25rem;">
-            <div class="card-header text-left ">Código:</div>
+            <div class="card-header text-left" style="font-size: 5.3mm;">Código:</div>
             <div class="card-body" style="margin-bottom: -20px; margin-top: -10px;">
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-3">
-                    <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:#7c6c35"></i><i class="fas fa-user-secret fa-stack-1x fa-inverse"></i></span>
+                    <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i class="fas fa-user-secret fa-stack-1x fa-inverse"></i></span>
                   </div>
                   <div class="col-md-9">
-                    <input style="margin-top: 10px;" type="text" name="codigoAdmin" id="codigoAdmin" maxlength="5" class="form-control input-lg" placeholder="ingrese codigo" title="máximo 5 numeros" required pattern="[0-9]+" required>
+                    <input style="margin-top: 10px;" type="text" name="codigoAdmin" id="codigoAdmin" maxlength="5" class="form-control input-lg" placeholder="Ingrese código" title="Máximo 5 números" required pattern="[0-9]+" required>
                   </div>
                 </div> <!--ACABA ROW-->
               </div><!--ACABA FORM-GROUP-->
             </div><!--ACABA CARD-BODY-->
             </div>
           </div><!--ACABA CARD BORDER-->
-
+          </br>
           <div class="card border-light mb-3 border-light" style="max-width: 25rem;">
-            <div class="card-header text-left ">Contraseña:</div>
+            <div class="card-header text-left" style="font-size: 5.3mm;">Contraseña:</div>
             <div class="card-body" style="margin-bottom: -20px; margin-top: -10px;">
               <div class="form-group" >
                 <div class="row">
                   <div class="col-md-3">
-                    <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:#7c6c35"></i><i class="fas fa-lock fa-stack-1x fa-inverse"></i></span>
+                    <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i class="fas fa-lock fa-stack-1x fa-inverse"></i></span>
                   </div>
                   <div class="col-md-9">
-                    <input style="margin-top: 10px;" type="password" name="contrasenaAdmin" id="contrasenaAdmin" class="form-control input-lg" placeholder="ingrese contraseña" required>
+                    <input style="margin-top: 10px;" type="password" name="contrasenaAdmin" id="contrasenaAdmin" class="form-control input-lg" placeholder="Ingrese contraseña" required>
                   </div>
                 </div> <!--ACABA ROW-->
               </div><!--ACABA FORM-GROUP-->
