@@ -29,7 +29,12 @@
     <script src="js/toast_script.js"></script>
     <script src="js/toastr.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-    
+    <script type="text/javascript">
+        history.pushState(null, null, location.href);
+        history.back();
+        history.forward();
+        window.onpopstate = function () { history.go(1); };
+    </script>
     <title>contenido de convenios</title>
   </head>
   <body>
@@ -96,10 +101,10 @@
             <div class="sv-tab-panel titulo-por-universidad" style="margin-top:20px;">
                 <div class="card border-dark" id="formularioEst" style="width: 72rem;"> <!--COMIENZA CARD BORDER-DARK-->
                     <div class="card-body "> <!--COMIENZA CARD-BODY-->
-                        Bienvenido <?php echo "$id";?> a la página del contenido de convenios del departamento de Internacionalización:
+                        <div class="text-center">Bienvenido <?php echo "$id";?> a la página de contenidos de convenios del Departamento de Internacionalización:</div>
                         <div class="texto-introducir-codigo">
                             En ésta página encontrarás los diferentes convenios que la Universidad Privada Bolivana te ofrece, ya 
-                            seas estudiante o docente, te podrás informar sobre los programas como ser:
+                            seas estudiante o docente, te podrás informar sobre los programas que cada Universidad o Instituto te ofrece como ser:
                             <div><i class="fas fa-circle" style="color:#FE4164;"></i>Intercambio de estudiantes</div>
                             <div><i class="fas fa-circle" style="color:#FE4164;"></i>Intercambio de docentes</div>
                             <div><i class="fas fa-circle" style="color:#FE4164;"></i>Colaboración en investigaciones</div>
@@ -124,7 +129,7 @@
                 include('dbconnect.php');
 
                 //create query
-                $queryContinente22 = "SELECT * FROM universidades";
+                $queryContinente22 = "SELECT * FROM universidades WHERE para_docentes=true;";
                 $resultContinente22 = mysqli_query($conn, $queryContinente22);
               ?>
               <!-- Accordion -->
@@ -246,7 +251,7 @@
                                   <!-- Accordion A-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryA = "SELECT * FROM universidades WHERE pais like 'a%';";
+                                    $queryA = "SELECT * FROM universidades WHERE pais like 'a%' and para_docentes=true;";
                                     $resultA = mysqli_query($conn, $queryA);
                                   ?>
                                     <!-- Accordion -->
@@ -326,7 +331,7 @@
                                   <!-- Accordion B-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryB = "SELECT * FROM universidades WHERE pais like 'b%';";
+                                    $queryB = "SELECT * FROM universidades WHERE pais like 'b%' and para_docentes=true;";
                                     $resultB = mysqli_query($conn, $queryB);
                                   ?>
                                     <!-- Accordion -->
@@ -406,7 +411,7 @@
                                   <!-- Accordion C-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryC = "SELECT * FROM universidades WHERE pais like 'c%';";
+                                    $queryC = "SELECT * FROM universidades WHERE pais like 'c%' and para_docentes=true;";
                                     $resultC = mysqli_query($conn, $queryC);
                                   ?>
                                     <!-- Accordion -->
@@ -486,7 +491,7 @@
                                   <!-- Accordion D-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryD = "SELECT * FROM universidades WHERE pais like 'd%';";
+                                    $queryD = "SELECT * FROM universidades WHERE pais like 'd%' and para_docentes=true;";
                                     $resultD = mysqli_query($conn, $queryD);
                                   ?>
                                     <!-- Accordion -->
@@ -566,7 +571,7 @@
                                   <!-- Accordion E-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryE = "SELECT * FROM universidades WHERE pais like 'e%';";
+                                    $queryE = "SELECT * FROM universidades WHERE pais like 'e%' and para_docentes=true;";
                                     $resultE = mysqli_query($conn, $queryE);
                                   ?>
                                     <!-- Accordion -->
@@ -646,7 +651,7 @@
                                   <!-- Accordion F-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryF = "SELECT * FROM universidades WHERE pais like 'f%';";
+                                    $queryF = "SELECT * FROM universidades WHERE pais like 'f%' and para_docentes=true;";
                                     $resultF = mysqli_query($conn, $queryF);
                                   ?>
                                     <!-- Accordion -->
@@ -726,7 +731,7 @@
                                   <!-- Accordion G-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryG = "SELECT * FROM universidades WHERE pais like 'g%';";
+                                    $queryG = "SELECT * FROM universidades WHERE pais like 'g%' and para_docentes=true;";
                                     $resultG = mysqli_query($conn, $queryG);
                                   ?>
                                     <!-- Accordion -->
@@ -806,7 +811,7 @@
                                   <!-- Accordion H-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryH = "SELECT * FROM universidades WHERE pais like 'h%';";
+                                    $queryH = "SELECT * FROM universidades WHERE pais like 'h%' and para_docentes=true;";
                                     $resultH = mysqli_query($conn, $queryH);
                                   ?>
                                     <!-- Accordion -->
@@ -886,7 +891,7 @@
                                   <!-- Accordion I-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryI = "SELECT * FROM universidades WHERE pais like 'i%';";
+                                    $queryI = "SELECT * FROM universidades WHERE pais like 'i%' and para_docentes=true;";
                                     $resultI = mysqli_query($conn, $queryI);
                                   ?>
                                     <!-- Accordion -->
@@ -966,7 +971,7 @@
                                   <!-- Accordion J-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryJ = "SELECT * FROM universidades WHERE pais like 'j%';";
+                                    $queryJ = "SELECT * FROM universidades WHERE pais like 'j%' and para_docentes=true;";
                                     $resultJ = mysqli_query($conn, $queryJ);
                                   ?>
                                     <!-- Accordion -->
@@ -1046,7 +1051,7 @@
                                   <!-- Accordion K-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryK = "SELECT * FROM universidades WHERE pais like 'k%';";
+                                    $queryK = "SELECT * FROM universidades WHERE pais like 'k%' and para_docentes=true;";
                                     $resultK = mysqli_query($conn, $queryK);
                                   ?>
                                     <!-- Accordion -->
@@ -1126,7 +1131,7 @@
                                   <!-- Accordion L-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryL = "SELECT * FROM universidades WHERE pais like 'l%';";
+                                    $queryL = "SELECT * FROM universidades WHERE pais like 'l%' and para_docentes=true;";
                                     $resultL = mysqli_query($conn, $queryL);
                                   ?>
                                     <!-- Accordion -->
@@ -1206,7 +1211,7 @@
                                   <!-- Accordion M-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryM = "SELECT * FROM universidades WHERE pais like 'm%';";
+                                    $queryM = "SELECT * FROM universidades WHERE pais like 'm%' and para_docentes=true;";
                                     $resultM = mysqli_query($conn, $queryM);
                                   ?>
                                     <!-- Accordion -->
@@ -1286,7 +1291,7 @@
                                   <!-- Accordion N-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryN = "SELECT * FROM universidades WHERE pais like 'n%';";
+                                    $queryN = "SELECT * FROM universidades WHERE pais like 'n%' and para_docentes=true;";
                                     $resultN = mysqli_query($conn, $queryN);
                                   ?>
                                     <!-- Accordion -->
@@ -1366,7 +1371,7 @@
                                   <!-- Accordion O-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryO = "SELECT * FROM universidades WHERE pais like 'o%';";
+                                    $queryO = "SELECT * FROM universidades WHERE pais like 'o%' and para_docentes=true;";
                                     $resultO = mysqli_query($conn, $queryO);
                                   ?>
                                     <!-- Accordion -->
@@ -1446,7 +1451,7 @@
                                   <!-- Accordion P-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryP = "SELECT * FROM universidades WHERE pais like 'p%';";
+                                    $queryP = "SELECT * FROM universidades WHERE pais like 'p%' and para_docentes=true;";
                                     $resultP = mysqli_query($conn, $queryP);
                                   ?>
                                     <!-- Accordion P-->
@@ -1526,7 +1531,7 @@
                                   <!-- Accordion Q-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryQ = "SELECT * FROM universidades WHERE pais like 'q%';";
+                                    $queryQ = "SELECT * FROM universidades WHERE pais like 'q%' and para_docentes=true;";
                                     $resultQ = mysqli_query($conn, $queryQ);
                                   ?>
                                     <!-- Accordion -->
@@ -1606,7 +1611,7 @@
                                   <!-- Accordion R-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryR = "SELECT * FROM universidades WHERE pais like 'r%';";
+                                    $queryR = "SELECT * FROM universidades WHERE pais like 'r%' and para_docentes=true;";
                                     $resultR = mysqli_query($conn, $queryR);
                                   ?>
                                     <!-- Accordion -->
@@ -1686,7 +1691,7 @@
                                   <!-- Accordion S-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryS = "SELECT * FROM universidades WHERE pais like 's%';";
+                                    $queryS = "SELECT * FROM universidades WHERE pais like 's%' and para_docentes=true;";
                                     $resultS = mysqli_query($conn, $queryS);
                                   ?>
                                     <!-- Accordion -->
@@ -1766,7 +1771,7 @@
                                   <!-- Accordion T-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryT = "SELECT * FROM universidades WHERE pais like 't%';";
+                                    $queryT = "SELECT * FROM universidades WHERE pais like 't%' and para_docentes=true;";
                                     $resultT = mysqli_query($conn, $queryT);
                                   ?>
                                     <!-- Accordion -->
@@ -1846,7 +1851,7 @@
                                   <!-- Accordion U-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryU = "SELECT * FROM universidades WHERE pais like 'u%';";
+                                    $queryU = "SELECT * FROM universidades WHERE pais like 'u%' and para_docentes=true;";
                                     $resultU = mysqli_query($conn, $queryU);
                                   ?>
                                     <!-- Accordion -->
@@ -1924,7 +1929,7 @@
                                   <!-- Accordion V-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryV = "SELECT * FROM universidades WHERE pais like 'v%';";
+                                    $queryV = "SELECT * FROM universidades WHERE pais like 'v%' and para_docentes=true;";
                                     $resultV = mysqli_query($conn, $queryV);
                                   ?>
                                     <!-- Accordion -->
@@ -2004,7 +2009,7 @@
                                   <!-- Accordion W-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryW = "SELECT * FROM universidades WHERE pais like 'w%';";
+                                    $queryW = "SELECT * FROM universidades WHERE pais like 'w%' and para_docentes=true;";
                                     $resultW = mysqli_query($conn, $queryW);
                                   ?>
                                     <!-- Accordion -->
@@ -2084,7 +2089,7 @@
                                   <!-- Accordion X-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryX = "SELECT * FROM universidades WHERE pais like 'x%';";
+                                    $queryX = "SELECT * FROM universidades WHERE pais like 'x%' and para_docentes=true;";
                                     $resultX = mysqli_query($conn, $queryX);
                                   ?>
                                     <!-- Accordion -->
@@ -2164,7 +2169,7 @@
                                   <!-- Accordion Y-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryY = "SELECT * FROM universidades WHERE pais like 'y%';";
+                                    $queryY = "SELECT * FROM universidades WHERE pais like 'y%' and para_docentes=true;";
                                     $resultY = mysqli_query($conn, $queryY);
                                   ?>
                                     <!-- Accordion -->
@@ -2244,7 +2249,7 @@
                                   <!-- Accordion Z-->
                                   <?php 
                                     include('dbconnect.php');
-                                    $queryZ = "SELECT * FROM universidades WHERE pais like 'z%';";
+                                    $queryZ = "SELECT * FROM universidades WHERE pais like 'z%' and para_docentes=true;";
                                     $resultZ = mysqli_query($conn, $queryZ);
                                   ?>
                                     <!-- Accordion -->
@@ -2335,11 +2340,11 @@
       include('dbconnect.php');
 
       //create query
-      $queryContinente1 = "SELECT * FROM universidades WHERE continente='1'";
-      $queryContinente2 = "SELECT * FROM universidades WHERE continente='2'";
-      $queryContinente3 = "SELECT * FROM universidades WHERE continente='3'";
-      $queryContinente4 = "SELECT * FROM universidades WHERE continente='4'";
-      $queryContinente5 = "SELECT * FROM universidades WHERE continente='5'";
+      $queryContinente1 = "SELECT * FROM universidades WHERE continente='1' and para_docentes=true;";
+      $queryContinente2 = "SELECT * FROM universidades WHERE continente='2' and para_docentes=true;";
+      $queryContinente3 = "SELECT * FROM universidades WHERE continente='3' and para_docentes=true;";
+      $queryContinente4 = "SELECT * FROM universidades WHERE continente='4' and para_docentes=true;";
+      $queryContinente5 = "SELECT * FROM universidades WHERE continente='5' and para_docentes=true;";
       $resultContinente1 = mysqli_query($conn, $queryContinente1);
       $resultContinente2 = mysqli_query($conn, $queryContinente2);
       $resultContinente3 = mysqli_query($conn, $queryContinente3);

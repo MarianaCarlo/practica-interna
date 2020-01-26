@@ -38,7 +38,7 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='1' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con La Paz";
-                        header("Location:mostrarContenidos.php?id=$codigo");
+                        header("Location:contenidosEstudiantes.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -49,7 +49,7 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='2' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con Cochabamba";
-                        header("Location:mostrarContenidos.php");
+                        header("Location:contenidosEstudiantes.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -59,7 +59,7 @@
                     $queryEstudiante = "UPDATE estudiantes SET campus='3' WHERE codigo_estudiante='$codigo';";
                     if (mysqli_query($conn, $queryEstudiante)) {
                         echo "estas logueado con Santa Cruz";
-                        header("Location:mostrarContenidos.php");
+                        header("Location:contenidosEstudiantes.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -72,7 +72,7 @@
                     $queryDocente = "UPDATE docentes SET campus='1' WHERE codigo_docente='$codigo';";
                     if (mysqli_query($conn, $queryDocente)) {
                         echo "estas logueado con La Paz";
-                        header("Location:mostrarContenidos.php");
+                        header("Location:contenidosDocentes.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -83,7 +83,7 @@
                     $queryDocente = "UPDATE docentes SET campus='2' WHERE codigo_docente='$codigo';";
                     if (mysqli_query($conn, $queryDocente)) {
                         echo "estas logueado con Cochabamba";
-                        header("Location:mostrarContenidos.php");
+                        header("Location:contenidosDocentes.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }
@@ -93,7 +93,7 @@
                     $queryDocente = "UPDATE docentes SET campus='3' WHERE codigo_docente='$codigo';";
                     if (mysqli_query($conn, $queryDocente)) {
                         echo "estas logueado con Santa Cruz";
-                        header("Location:mostrarContenidos.php");
+                        +header("Location:contenidosDocentes.php?id=$codigo");
                     } else {
                         echo "no puedes acceder";
                     }
