@@ -1,0 +1,340 @@
+.por-tipo li{
+    left: 610px;
+    top: 460.0px;
+}
+
+/*.nav-link {
+    color: #FE4164;
+    color: #424242;
+}*/
+.lineas {
+    height: 3px;
+  background-color: #FE4164;
+  
+}
+
+.nav-color ul li a {
+    color:#fff;
+    background-color: aqua;
+}
+/*TITULO AÑADIR ESTUDIANTES*/
+.anadir-est {
+    font-size: 25px;
+    color: black;
+    border:0 !important;
+    position: absolute;
+    left: 400px;
+    top: 235.0px;
+}
+
+/*TITULO AÑADIR DOCENTES*/
+.anadir-doc {
+    font-size: 25px;
+    color: black;
+    border:0 !important;
+    position: absolute;
+    left: 400px;
+    top: 485.0px;
+}
+
+
+.pos-rep-est {
+    color: black;
+    border:0 !important;
+    position: absolute;
+    left: 400px;
+    top: 195.0px;
+    
+}
+
+
+/*Texto: Introduce el código que quieres añadir estudiantes:*/
+.texto-introducir-codigo{
+    font-size: 18px; 
+    margin-left: 150px; 
+    margin-top: 10px;
+}
+
+/*INPUT DE ESCRIBIR CODIGO - POSICION*/
+.input-codigo{
+    font-size: 18px; 
+    margin-left: 200px; 
+    margin-top: 10px;
+}
+
+/*INPUT DE ESCRIBIR los inputs - POSICION*/
+.input-de-anadir{
+    font-size: 18px; 
+    margin-left: 200px; 
+    margin-top: 10px;
+}
+
+/*AÑADIR INPUT ESPECIAL PARA AÑADIR VISTAS - POSICION*/
+
+.various-code-input {
+    font-size: 18px;
+    color: black;
+    border:0 !important;
+    position: absolute;
+    left: 540px;
+    top: 300.0px;
+}
+
+
+
+/* BOTON DE GUARDAR EL ANADIMIENTO DE ESTUDIANTES Y DOCENTES*/
+.boton-circle-guarda-est-doc {
+    color: white;
+    background: black;
+    border-radius: 40px;
+    border-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+    margin-left: 320px;
+    margin-top: 7px;
+}
+
+/*BOTON DE ADMNISTRADOR*/
+.boton-circle-vista{
+    color: white;
+    background: black;
+    border-radius: 40px;
+    border-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+    position: absolute;
+    left: 280px;
+    top: 250.0px;
+}
+
+.boton-circle{
+    color: white;
+    background: black;
+    border-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+}
+
+/*BOTON DE ANADIR ADMNISTRADOR*/
+.boton-anadir-admin{
+    color: white;
+    background: black;
+    border-radius: 40px;
+    border-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 78px;
+    font-size: large;
+    
+}
+/* VERTICAL TAB DEL ADMINISTRADOR*/
+div.vertical-tabs{
+    font-size:15px;
+    padding:0px;
+    color:#000;
+    
+}
+.vertical-tabs .nav-tabs .nav-link{
+    border-radius: 0;
+    background:#424242;
+    text-align:center;
+    font-size: 18px;
+    border:1px solid #424242;
+    color:#fff;
+    height:40px;
+    width: 268px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    
+}
+ .vertical-tabs .nav-tabs .nav-link.active{
+    background-color:#FE4164!important;
+    color:#fff;
+}
+
+ .vertical-tabs .nav.nav-tabs{
+    border-bottom:0;
+    display:block;
+    float:left;
+    margin-right:20px;
+    padding-right:15px;
+    
+}
+
+/*------------------HORIZONTAL TAB DEL ADMINISTRADOR------------------*/
+.vertical-tab{
+    font-size:15px;
+    padding:0px;
+    color:#000;
+    
+}
+ .vertical-tab .nav-tab .nav-link{
+    border-radius: 0;
+    background:#424242;
+    text-align:center;
+    font-size: 16px;
+    border:1px solid #424242;
+    color:#fff;
+    height:40px;
+    width: 337.2px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+ .vertical-tab .nav-tab .nav-link.active{
+    background-color:#FE4164!important;
+    color:#fff;
+}
+
+.vertical-tab .nav.nav-tab{
+    border-bottom:0;
+    
+}
+/*POSICION DE TITULO BUSQUEDA A-Z*/
+.titulo-por-universidad {
+    font-size: 30px;
+    color: black;
+    border:0 !important;
+    padding-left: 100px;
+}
+/*POSICION DE TODAS LAS LETRAS DE BUSQUEDA A-Z*/
+.posicion-letras-a-z {
+    color: black;
+    border:0 !important;
+    padding-left: 120px;
+    padding-right: 12px;
+}
+
+/*LINKBAR DE BUSQUEDA A-Z*/
+nav > div a.nav-item.nav-link,
+  nav > div a.nav-item.nav-link.active
+  {
+    border: none;
+    color:#fff;
+    background:#272e38;  
+    font-size: 16px;
+    height:0px;
+    width: 5px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    margin-right: 11px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+    
+  }
+  
+  nav > div a.nav-item.nav-link.active:after
+   {
+    content: "";
+    text-align:center;
+    position: relative;
+    bottom: -38px;
+    right: 22px;
+    border: 15px solid transparent;
+    border-top-color: #FE4164 ;
+  }
+  
+  
+  nav > div a.nav-item.nav-link:hover,
+  nav > div a.nav-item.nav-link:focus
+  {
+    border: none;
+      background: #FE4164;
+      color:#fff;
+      text-align:center;
+      transition:background 0.20s linear;
+      
+  }
+
+  /*IMAGENES POSICIONES DE LETRAS*/
+.pos-letters {
+    width: 57px;
+    padding-left: -200px;
+}
+
+/*----------------POPUP----------------*/  
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+   
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    margin-top: 250px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+   
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+   
+@media screen and (max-width: 700px){
+    .box{
+    width: 70%;
+    }
+    .popup{
+    width: 70%;
+    }
+}
+
+.title-popup {
+    font-family: 'PT Serif', serif;
+    font-size: x-large;
+}
+
+
+/*ACCORDION PARA CONTINENTES*/
+#accordion-style-1 .btn-link {
+    font-weight: 400;
+    color: #FE4164;
+    background-color: transparent;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: bold;
+	padding-left: 25px;
+}
+
+#accordion-style-1 .card-body {
+    border-top: 2px solid #FE4164;
+}

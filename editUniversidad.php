@@ -110,7 +110,7 @@
                                 </div>
                                 </br>
                                 <!--TERCERA LINEA-->
-                                <label style="color:white;">Fecha de vencimiento:</label><label style="margin-left:400px;color:white;">Decripción:</label>
+                                <label style="color:white;">Fecha de vencimiento:</label><label style="margin-left:400px;color:white;">Descripción:</label>
                                 <div class="md-form w-100">
                                     <div class="row">
                                         <div class="col-md-1">

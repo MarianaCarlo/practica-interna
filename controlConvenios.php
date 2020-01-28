@@ -282,11 +282,12 @@
                                 <div class="col-6" style="margin-top:10px;">
                                   <select name = "pais" >
                                     <?php
+                                    header("Content-Type: text/html;charset=utf-8");
                                       $queryPaises = "SELECT * FROM paises";
                                       $resulcheckPaises = mysqli_query($conn, $queryPaises);
                                       if ($resulcheckPaises) {
                                         while($renglon = mysqli_fetch_assoc($resulcheckPaises)){
-                                            echo "<option value='".$renglon['nombre_pais']."'>";
+                                            echo "<option value='".$renglon['nombre_pais']."'>"; 
                                             echo $renglon['nombre_pais'];
                                             echo "</option>";
                                         }  
