@@ -410,6 +410,11 @@
                                         <input type="radio" name="reportesEstuDoce" value="reporteDoc">
                                         <span class="checkmark"></span>
                                     </label>
+
+                                    <label class="containerrr" style="font-size: 5mm; margin-top:15px;">Estudiantes/Docentes
+                                        <input type="radio" name="reportesEstuDoce" value="reporteEstDoc">
+                                        <span class="checkmark"></span>
+                                    </label>
                                     
                                 </div>
                                 
@@ -646,6 +651,9 @@
             </tbody>
           </table>
           <!---->
+          <form method="post" class="form" action="reporteUniversidades.php">
+            <button type="submit" name="generar_reporte_universidades" class="btn boton-circle" style="margin-left: 400px; margin-top:25px;">Generar reporte de universidades</button>
+          </form>
         </div>
       </div>
             </div>

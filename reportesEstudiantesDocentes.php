@@ -86,6 +86,47 @@ if(isset($_POST['generar_reporte'])){
         } else {
             echo "error xd";
         }
+    } else if ($valor== "reporteEstDoc"){
+        //NOMBRE DEL ARCHIVO
+        header('Content-Type:text/csv; charset=latin1');
+        header('Content-Disposition: attachment; filename="Reporte_Estudiantes_y_Docentes.csv"');
+        //SALIDA DEL ARCHIVO
+        $salida = fopen('php://output', 'w');
+        //ENCABEZADOS
+        $header = array(
+            "Código",
+            "Ocupación", 
+            "Campus",
+            "Ciudad", 
+            "Nombre de Universidad o Instituto", 
+            "Pais", 
+            "Fecha de ingreso",
+            "Hora"
+        );
+        $header = array_map("utf8_decode", $header);
+        fputcsv($salida,$header,';');
+        
+        $query = "SELECT * FROM reportesambos WHERE fecha BETWEEN '$fecha1' and '$fecha2'";
+        
+        $reporteCSV = mysqli_query($conn, $query);
+
+        if ($reporteCSV) {
+            while($filaR =  mysqli_fetch_assoc($reporteCSV)){
+                $tmp = array(
+                    $filaR['codigo'],
+                    $filaR['ocupacion'],
+                    utf8_decode($filaR['campus']),
+                    $filaR['ciudad'],
+                    utf8_decode($filaR['nombre_universidad']),
+                    utf8_decode($filaR['pais']),
+                    $filaR['fecha'],
+                    $filaR['hora']
+                );
+                fputcsv($salida,$tmp,';');
+            }
+        } else {
+            echo "error xd";
+        }
     } else {
         echo "no se puede generar el reporte";
     }
