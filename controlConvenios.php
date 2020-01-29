@@ -379,7 +379,50 @@
                   <!----------------  TAB 4  Reportes----------------->
                   <div class="tab-pane" id="pag4" role="tabpanel"> <!--COMIENZA TAB-PANE REPORTES-->
                     <div class="sv-tab-panel anadir-est">
-                      <p>Reportes</p>
+                      <div class="card border-dark" id="formularioEst" style="width: 45rem; margin-top: 100px;"> <!--COMIENZA CARD BORDER-DARK-->
+                        <div class="card-body" > <!--COMIENZA CARD-BODY-->
+                          Reporte de estudiantes y docentes:
+                          <div class="texto-introducir-codigo">
+                            Introduce el rango de fechas que deseas en el reporte:
+                          </div>
+                          <form method="post" class="form" action="reportesEstudiantesDocentes.php">
+                            <div class="input-codigo"> <!--COMIENZA INPUT-CODIGO-->
+                              <div class="form-inline"> <!--COMIENZA FORM-INLINE-->
+                                <div class="form-group"> <!--COMIENZA FORM-GROUP-->
+                                  <!--DESDE QUE FECHA-->
+                                  <label class="col-3 col-form-label" style="margin-left:-67px;">Desde que fecha:</label>
+                                  <div class="col-9">
+                                    <input class="form-control input-lg" name="fecha1" type="date" value="2020-01-01">
+                                  </div>
+                                  <!--HASTA QUE FECHA-->
+                                  <label class="col-3 col-form-label" style="margin-top:20px; margin-left:-67px;">Hasta que fecha:</label>
+                                  <div class="col-9">
+                                    <input style="margin-top:20px;" name="fecha2" class="form-control input-lg" type="date" value="2020-01-10">
+                                  </div> 
+
+                                  <div class="containerrr" style="margin-left: 100px; margin-top: 20px;">      
+                                    <label class="containerrr" style="font-size: 5mm;"> Estudiantes
+                                        <input type="radio" checked="checked" name="reportesEstuDoce" value="reporteEst">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                                    <label class="containerrr" style="font-size: 5mm; margin-top:15px;">Docentes
+                                        <input type="radio" name="reportesEstuDoce" value="reporteDoc">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                                </div>
+                                
+                                </div> <!--ACABA FORM-GROUP-->
+                              </div> <!--ACABA FORM-INLINE-->
+                            </div> <!--ACABA INPUT-CODIGO-->
+                            
+                            <button type="submit" name="generar_reporte" class="btn boton-circle" style="margin-left: 270px; margin-top:25px;">Generar reporte</button>
+                            
+                          </form>
+                        </div> <!--ACABA CARD-BODY-->
+                      </div> <!--ACABA CARD BORDER-DARK-->
+
                     </div>
                   </div> <!--ACABA TAB-PANE REPORTES-->
                   

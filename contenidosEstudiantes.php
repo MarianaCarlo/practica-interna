@@ -47,30 +47,15 @@
     $ciudad = $_GET['ciudad'];
     include ('dbconnect.php');
     
-    $code = $_POST['codigo'];
-    
-    $query = "SELECT codigo_admi from administradores where codigo_admi='$codigoAdmin' and contrasena='$contrasenaAdmin'";
-    $query2 = "SELECT * from administradores where codigo_admi='$codigoAdmin'";
-    $query3 = "SELECT * from administradores where codigo_admi='$code'";
-    
-
-    $result = mysqli_query($conn, $query);
-    $result2 = mysqli_query($conn, $query2);
-    $result3 = mysqli_query($conn, $query3);
+    $query4 = "SELECT * from estudiantes where codigo_estudiante='$id'";
+    $result4 = mysqli_query($conn, $query4);
 
     /*Verificacion de si ese codigo esta en la base de datos*/ 
-    $resultCheck = mysqli_num_rows($result);
+    $resultCheck4 = mysqli_num_rows($result4);
     $codigodeladmin = 0;
-    $nombreAdmi = null;
-    $contAdmi = null;
-    $cam = 0;
-    /*if  ($resultCheck > 0) {
-      while ($row = $result2 -> fetch_row()) {
-        $codigodeladmin = $row[0];
-        $nombreAdmi = $row[1];
-        $contAdmi = $row[2];
-        $cam = $row[3];
-      } */ 
+    
+    if  ($resultCheck4 > 0) {
+     
       
   ?>
     <div class="container">
@@ -211,11 +196,12 @@
                                       <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                     </div>
                                     <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                    <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowresultContinente22['enlace_de_interes']."'>".$rowresultContinente22['enlace_de_interes']."</a>";?></div>
+                                    <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowresultContinente22['pais']; ?>&conv=<?php echo $rowresultContinente22['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowresultContinente22['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowresultContinente22['enlace_de_interes']; ?></a></div>
                                     </div>
                                     <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                     <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
                                     <div style="height: 2px;background-color: #FE4164;width: 47%;margin-top:10px;"></div>
+                                    
                                   </div> <!--ACABA ROW-->
                                 </div>
                               </div>
@@ -333,7 +319,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowA['enlace_de_interes']."'>".$rowA['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowA['pais']; ?>&conv=<?php echo $rowA['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowA['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowA['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -413,7 +399,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowB['enlace_de_interes']."'>".$rowB['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowB['pais']; ?>&conv=<?php echo $rowB['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowB['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowB['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -493,7 +479,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowC['enlace_de_interes']."'>".$rowC['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowC['pais']; ?>&conv=<?php echo $rowC['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowC['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowC['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -573,7 +559,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowD['enlace_de_interes']."'>".$rowD['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowD['pais']; ?>&conv=<?php echo $rowD['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowD['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowD['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -653,7 +639,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowE['enlace_de_interes']."'>".$rowE['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowE['pais']; ?>&conv=<?php echo $rowE['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowE['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowE['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -733,7 +719,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowF['enlace_de_interes']."'>".$rowF['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowF['pais']; ?>&conv=<?php echo $rowF['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowF['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowF['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -813,7 +799,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowG['enlace_de_interes']."'>".$rowG['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowG['pais']; ?>&conv=<?php echo $rowG['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowG['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowG['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -893,7 +879,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowH['enlace_de_interes']."'>".$rowH['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowH['pais']; ?>&conv=<?php echo $rowH['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowH['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowH['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -973,7 +959,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowI['enlace_de_interes']."'>".$rowI['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowI['pais']; ?>&conv=<?php echo $rowI['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowI['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowI['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1053,7 +1039,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowJ['enlace_de_interes']."'>".$rowJ['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowJ['pais']; ?>&conv=<?php echo $rowJ['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowJ['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowJ['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1133,7 +1119,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowK['enlace_de_interes']."'>".$rowK['enlace_de_interes']."</a>";?></div>
+                                                                            <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowK['pais']; ?>&conv=<?php echo $rowK['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowK['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowK['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1213,7 +1199,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowL['enlace_de_interes']."'>".$rowL['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowL['pais']; ?>&conv=<?php echo $rowL['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowL['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowL['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1293,7 +1279,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowM['enlace_de_interes']."'>".$rowM['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowM['pais']; ?>&conv=<?php echo $rowM['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowM['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowM['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1373,7 +1359,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowN['enlace_de_interes']."'>".$rowN['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowN['pais']; ?>&conv=<?php echo $rowN['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowN['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowN['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1453,7 +1439,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowO['enlace_de_interes']."'>".$rowO['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowO['pais']; ?>&conv=<?php echo $rowO['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowO['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowO['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1533,7 +1519,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowP['enlace_de_interes']."'>".$rowP['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowP['pais']; ?>&conv=<?php echo $rowP['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowP['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowP['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1613,7 +1599,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowQ['enlace_de_interes']."'>".$rowQ['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowQ['pais']; ?>&conv=<?php echo $rowQ['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowQ['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowQ['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1693,7 +1679,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowR['enlace_de_interes']."'>".$rowR['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowR['pais']; ?>&conv=<?php echo $rowR['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowR['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowR['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1773,7 +1759,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowS['enlace_de_interes']."'>".$rowS['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowS['pais']; ?>&conv=<?php echo $rowS['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowS['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowS['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1853,7 +1839,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowT['enlace_de_interes']."'>".$rowT['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowT['pais']; ?>&conv=<?php echo $rowT['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowT['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowT['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -1931,7 +1917,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowU['enlace_de_interes']."'>".$rowU['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowU['pais']; ?>&conv=<?php echo $rowU['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowU['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowU['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2011,7 +1997,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowV['enlace_de_interes']."'>".$rowV['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowV['pais']; ?>&conv=<?php echo $rowV['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowV['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowV['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2091,7 +2077,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowW['enlace_de_interes']."'>".$rowW['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowW['pais']; ?>&conv=<?php echo $rowW['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowW['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowW['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2171,7 +2157,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowX['enlace_de_interes']."'>".$rowX['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowX['pais']; ?>&conv=<?php echo $rowX['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowX['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowX['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2251,7 +2237,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowY['enlace_de_interes']."'>".$rowY['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowY['pais']; ?>&conv=<?php echo $rowY['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowY['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowY['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2331,7 +2317,7 @@
                                                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                                           </div>
                                                                           <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                                          <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowZ['enlace_de_interes']."'>".$rowZ['enlace_de_interes']."</a>";?></div>
+                                                                          <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowZ['pais']; ?>&conv=<?php echo $rowZ['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowZ['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowZ['enlace_de_interes']; ?></a></div>
                                                                           </div>
                                                                           <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                                           <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2441,7 +2427,7 @@
                                                         <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                       </div>
                                                       <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowresultContinente1['enlace_de_interes']."'>".$rowresultContinente1['enlace_de_interes']."</a>";?></div>
+                                                      <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowresultContinente1['pais']; ?>&conv=<?php echo $rowresultContinente1['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowresultContinente1['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowresultContinente1['enlace_de_interes']; ?></a></div>
                                                       </div>
                                                       <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                       <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2513,7 +2499,7 @@
                                                         <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                       </div>
                                                       <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente2['enlace_de_interes']."'>".$rowContinente2['enlace_de_interes']."</a>";?></div>
+                                                      <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowContinente2['pais']; ?>&conv=<?php echo $rowContinente2['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowContinente2['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowContinente2['enlace_de_interes']; ?></a></div>
                                                       </div>
                                                       <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                       <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2585,7 +2571,7 @@
                                                         <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                       </div>
                                                       <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente3['enlace_de_interes']."'>".$rowContinente3['enlace_de_interes']."</a>";?></div>
+                                                      <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowContinente3['pais']; ?>&conv=<?php echo $rowContinente3['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowContinente3['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowContinente3['enlace_de_interes']; ?></a></div>
                                                       </div>
                                                       <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                       <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2657,7 +2643,7 @@
                                                         <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                       </div>
                                                       <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente4['enlace_de_interes']."'>".$rowContinente4['enlace_de_interes']."</a>";?></div>
+                                                      <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowContinente4['pais']; ?>&conv=<?php echo $rowContinente4['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowContinente4['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowContinente4['enlace_de_interes']; ?></a></div>
                                                       </div>
                                                       <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                       <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2729,7 +2715,7 @@
                                                         <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
                                                       </div>
                                                       <div class="col-md-5"> <!--ENLACE DE INTERES-->
-                                                      <div style="font-size: 5mm;margin-top:10px;"><?php echo "<a href='".$rowContinente5['enlace_de_interes']."'>".$rowContinente5['enlace_de_interes']."</a>";?></div>
+                                                      <div style="font-size: 5mm;margin-top:10px;"><a href="clickEstudiante.php?pais=<?php echo $rowContinente5['pais']; ?>&conv=<?php echo $rowContinente5['nombre']; ?>&user=<?php echo $id ?>&link=<?php echo $rowContinente5['enlace_de_interes']; ?>&campus=<?php echo $campus; ?>&ciudad=<?php echo $ciudad ?>"><?php echo $rowContinente5['enlace_de_interes']; ?></a></div>
                                                       </div>
                                                       <div style="height: 2px;background-color: #FE4164;width: 40%; margin-top:10px;"></div>
                                                       <div style="height: 2px;background-color: white;width: 13%; margin-top:10px;"></div>
@@ -2767,9 +2753,10 @@
     </div> <!--ACABA POST-F-T-->  
     
     <?php
-      /* } else {
-          echo "no puedes acceder porque el código: " . $codigoAdmin . " no coincide con la constraseña";
-      }*/
+       } else {
+          echo "no puedes acceder porque el código no coincide con la constraseña";
+          header("Location:mensajes/mensaje13.php"); 
+      }
     ?>
     <!-- Optional JavaScript -->
     <script src="js/admin.js"></script>
