@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link href="css/index.css" rel="stylesheet" >
+    <link href="css/newindex.css" rel="stylesheet" >
     <!--JS-->
     <script type="text/javascript">
         history.pushState(null, null, location.href);
@@ -30,43 +30,16 @@
     <title>contenido de convenios</title>
   </head>
   <body  onunload="">
-
+  <img src="img/titulo.png">
     <div class="container"><!---------------CONTAINER PARA CAROUSEL----------->
       <!--SLIDER CAROUSEL-->
         <div class="container text-center">
-          <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-            <ol class="carousel-indicators">
-              <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#mycarousel" data-slide-to="1"></li>
-              <li data-target="#mycarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/slide1.png">
-                <div class="carousel-caption"></div>
-              </div>
-              <div class="carousel-item"> 
-                <img src="img/slide2.png"> 
-                <div class="carousel-caption"></div>
-              </div>
-              <div class="carousel-item"> 
-                <img src="img/slide3.png"> 
-                <div class="carousel-caption"></div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div> 
+                
           <!-- Bienvenido-->
           <h4>Bienvenido a la página oficial de contenidos de convenios de la Universidad Privada Boliviana</h4>
           <h6>.</h6>
-      </div> <!-------------------ACABA CONTAINER PARA CAROUSEL------------------------>
+          </div>
+    </div> <!-------------------ACABA CONTAINER PARA CAROUSEL------------------------>
       
       <!------LOGIN-------->
       <div class="text-center"> <!------TEXT CENTER------->
@@ -110,7 +83,7 @@
               </div>
             </div><!--ACABA CARD BORDER-->            
             
-            <button type="submit" name="submit_index" class="btn boton-circle" style="margin-left:490px;">Ingresar</button>
+            <button type="submit" name="submit_index" class="btn boton-circle" style="margin-left:620px;">Ingresar</button>
           
           </div><!--ACABA CONTAINER-->
         </form>

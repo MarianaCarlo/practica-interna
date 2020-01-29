@@ -1,0 +1,75 @@
+h4 {
+    font-family: 'Rubik', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 17px;
+}
+
+h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 7.5mm;
+    text-align: center;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+html,body{
+    background-image: url('https://i.ibb.co/hmy6jmK/log.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.card { 
+    background-color: rgb(175, 33, 33); opacity: 1; 
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+
+}
+.card-header {
+    color:whitesmoke;
+}
+.bienvenido {
+    color: blanchedalmond;
+    left: 370px;
+    top: 600.0px;
+    
+}
+
+.icon-administrador-css span{
+    width: 60px;
+    height: 60px;
+    border-radius: 65px;
+    background-color: #7c6c35;
+    color: #fff;
+    border:0 !important;
+    position: absolute;
+    left: 405px;
+    top: 190.0px;
+}
+
+.icon-password-css span{
+    width: 60px;
+    height: 60px;
+    border-radius: 65px;
+    background-color: #7c6c35;
+    color: #fff;
+    border:0 !important;
+    position: absolute;
+    left: 410px;
+    top: 350.0px;
+}
+
+.boton-circle{
+    color: white;
+    background: black;
+    border-radius: 40px;
+    border-color: black;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin-left: 500px;
+}
