@@ -75,11 +75,11 @@
       }  
       
   ?>
-    <div class="container">
+    
       <div class="text-center">
-          <img src="img/title.png" alt="title">
+          <img src="img/tituloAdmi.png" alt="title">
       </div>
-    </div>
+    
 
     <div class="pos-f-t">  <!------COMIENZA POST-F-T------->  
       <div class="vertical-tab"> <!------COMIENZA VERTICAL-TAB------->  
