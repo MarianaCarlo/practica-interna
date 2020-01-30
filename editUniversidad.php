@@ -114,17 +114,17 @@
                                 <div class="md-form w-100">
                                     <div class="row">
                                         <div class="col-md-1">
-                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-calendar-day fa-stack-1x fa-inverse"></i></span>
+                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black; margin-top: 32px;"></i><i  style="color:#F5FFFA;margin-top: 32px;" class="fas fa-calendar-day fa-stack-1x fa-inverse"></i></span>
                                         </div>
                                         <div class="col-md-5"> <!--fecha de vencimiento-->
-                                            <input type="date" id="orangeForm-name2" class="form-control" style="margin-top:10px; color:black;" name="fecha_vencimiento" value="<?php echo $row['fecha_vencimiento'] ?>" id="date-input">
+                                            <input type="date" id="orangeForm-name2" class="form-control" style="margin-top:40px; color:black;" name="fecha_vencimiento" value="<?php echo $row['fecha_vencimiento'] ?>" id="date-input">
                                         </div>
                                         
                                         <div class="col-md-1">
-                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
+                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black; margin-top: 25px;"></i><i style="color:#F5FFFA; margin-top: 25px;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
                                         </div>
                                         <div class="col-md-5"> <!--fecha descripcion-->
-                                            <input type="text" id="orangeForm-name2" class="form-control"style="margin-top:10px; color:black;" name="desc" value="<?php echo $row['descripcion'] ?>">
+                                            <textarea id="orangeForm-name2" class="form-control" rows="4" style="margin-top:10px; color:black;" name="desc"><?php echo $row['descripcion'] ?></textarea>
                                         </div>
                                     </div>
                                 </div>

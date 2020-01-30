@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
     <link href="css/admin.css" rel="stylesheet" >
+    
     <link href="css/sinVencimientos.css" rel="stylesheet" >
     <link href="css/radiobutton.css" rel="stylesheet" >
     <link href="css/toastr.css" rel="stylesheet" >
@@ -333,10 +334,10 @@
                                   <input class="form-control" name="fecha_vencimiento" type="date" value="2019-12-02" id="fecha-vencimiento">
                                 </div>
                                 <!--Descripcion-->
-                                <label class="col-6 col-form-label">Descripción:</label>
+                                <label class="col-6 col-form-label" >Descripción:</label>
                                 <div class="col-6">
                                   <div class="form-group">
-                                    <textarea style="padding-left: 100px;" name="descripcion" class="form-control" rows="5" placeholder="- Costo de vida - condiciones - carreras involucradas" required></textarea>
+                                    <textarea style="padding-left: 100px;padding-right: 100px;" name="descripcion" class="form-control" rows="7" placeholder="- Costo de vida - condiciones - carreras involucradas" required></textarea>
                                   </div>
                                 </div>
                                 <!--Enlaces de interes-->
