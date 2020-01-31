@@ -29,22 +29,26 @@ if(isset($_POST['generar_reporte'])){
         $query = "SELECT * FROM reportesestudiantes WHERE fecha BETWEEN '$fecha1' and '$fecha2'";
         
         $reporteCSV = mysqli_query($conn, $query);
-
-        if ($reporteCSV) {
-            while($filaR =  mysqli_fetch_assoc($reporteCSV)){
-                $tmp = array(
-                    $filaR['codigo_estudiante'],
-                    utf8_decode($filaR['campus']),
-                    $filaR['ciudad'],
-                    utf8_decode($filaR['nombre_universidad']),
-                    utf8_decode($filaR['pais']),
-                    $filaR['fecha'],
-                    $filaR['hora']
-                );
-                fputcsv($salida,$tmp,';');
+        $resultreporteCSV = mysqli_num_rows($reporteCSV);
+        if  ($resultreporteCSV > 0){
+            if ($reporteCSV) {
+                while($filaR =  mysqli_fetch_assoc($reporteCSV)){
+                    $tmp = array(
+                        $filaR['codigo_estudiante'],
+                        utf8_decode($filaR['campus']),
+                        $filaR['ciudad'],
+                        utf8_decode($filaR['nombre_universidad']),
+                        utf8_decode($filaR['pais']),
+                        $filaR['fecha'],
+                        $filaR['hora']
+                    );
+                    fputcsv($salida,$tmp,';');
+                }
+            } else {
+                header("Location:mensajes/mensaje14.php");
             }
         } else {
-            echo "error xd";
+            header("Location:mensajes/mensaje14.php");
         }
     /*--------------------------------REPORTE DOCENTES-------------------------------------------*/
     } else if ($valor == "reporteDoc") {
@@ -69,23 +73,28 @@ if(isset($_POST['generar_reporte'])){
         $query = "SELECT * FROM reportesdocentes WHERE fecha BETWEEN '$fecha1' and '$fecha2'";
         
         $reporteCSV = mysqli_query($conn, $query);
-
-        if ($reporteCSV) {
-            while($filaR =  mysqli_fetch_assoc($reporteCSV)){
-                $tmp = array(
-                    $filaR['codigo_docente'],
-                    utf8_decode($filaR['campus']),
-                    $filaR['ciudad'],
-                    utf8_decode($filaR['nombre_universidad']),
-                    utf8_decode($filaR['pais']),
-                    $filaR['fecha'],
-                    $filaR['hora']
-                );
-                fputcsv($salida,$tmp,';');
+        $resultreporteCSV = mysqli_num_rows($reporteCSV);
+        if  ($resultreporteCSV > 0){
+            if ($reporteCSV) {
+                while($filaR =  mysqli_fetch_assoc($reporteCSV)){
+                    $tmp = array(
+                        $filaR['codigo_docente'],
+                        utf8_decode($filaR['campus']),
+                        $filaR['ciudad'],
+                        utf8_decode($filaR['nombre_universidad']),
+                        utf8_decode($filaR['pais']),
+                        $filaR['fecha'],
+                        $filaR['hora']
+                    );
+                    fputcsv($salida,$tmp,';');
+                }
+            } else {
+                echo "error xd";
             }
         } else {
-            echo "error xd";
+            header("Location:mensajes/mensaje14.php");
         }
+        
     } else if ($valor== "reporteEstDoc"){
         //NOMBRE DEL ARCHIVO
         header('Content-Type:text/csv; charset=latin1');
@@ -109,23 +118,27 @@ if(isset($_POST['generar_reporte'])){
         $query = "SELECT * FROM reportesambos WHERE fecha BETWEEN '$fecha1' and '$fecha2'";
         
         $reporteCSV = mysqli_query($conn, $query);
-
-        if ($reporteCSV) {
-            while($filaR =  mysqli_fetch_assoc($reporteCSV)){
-                $tmp = array(
-                    $filaR['codigo'],
-                    $filaR['ocupacion'],
-                    utf8_decode($filaR['campus']),
-                    $filaR['ciudad'],
-                    utf8_decode($filaR['nombre_universidad']),
-                    utf8_decode($filaR['pais']),
-                    $filaR['fecha'],
-                    $filaR['hora']
-                );
-                fputcsv($salida,$tmp,';');
+        $resultreporteCSV = mysqli_num_rows($reporteCSV);
+        if  ($resultreporteCSV > 0){
+            if ($reporteCSV) {
+                while($filaR =  mysqli_fetch_assoc($reporteCSV)){
+                    $tmp = array(
+                        $filaR['codigo'],
+                        $filaR['ocupacion'],
+                        utf8_decode($filaR['campus']),
+                        $filaR['ciudad'],
+                        utf8_decode($filaR['nombre_universidad']),
+                        utf8_decode($filaR['pais']),
+                        $filaR['fecha'],
+                        $filaR['hora']
+                    );
+                    fputcsv($salida,$tmp,';');
+                }
+            } else {
+                echo "error xd";
             }
         } else {
-            echo "error xd";
+            header("Location:mensajes/mensaje14.php");
         }
     } else {
         echo "no se puede generar el reporte";

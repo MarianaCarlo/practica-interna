@@ -18,34 +18,56 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link href="css_mensajes/mensaje4.css" rel="stylesheet" >
     
-    <!--JS-->
+    
+    <script language="JavaScript" type="text/javascript" src="js/custom.js"></script>
     <title>contenido de convenios</title>
   </head>
   <body>
-      
-    <div class="container" style="margin-top:100px;">
-            <form role="form">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-5">
-                        <div class="dbox dbox--color-1">
-                            <div class="dbox__icon">
-                            <i class="fas fa-thumbs-down"></i>
-                            </div>
-                            <div class="dbox__body">
-                            <span class="dbox__count">LAS CONTRASEÑAS NO COINCIDEN</span>
-                            <span class="dbox__title">POR FAVOR VERIFICA QUE SEAN IGUALES</span>
-                        </div>
-                        
-                            
-                            <a href="javascript:history.go(-1)"class="dbox__action__btn" role="button"> Volver Atrás</a>
-                        			
-                    </div>
-                </div>
-            </form>
+  <?php
+      // add dbconnection
+      include('dbconnect.php');
+
+      //create query
+      $query = "SELECT * FROM prueba4";
+      $result = mysqli_query($conn, $query);
+    ?>
+  <div class="main">
+    <h1>Mostrando imagen almacenada en MySQL</h1>
+    <?php
+                while($row = mysqli_fetch_assoc($result)){
+                  
+              ?>
+    <div class="container">
+        <div class="row">
+            <label class="col-6">Nombre:</label>
+            <div class="col-6">
+                <?php echo $row['nombre']; $col = 2;?>
+            </div>
+             
+            <label class="col-6">Carrera:</label>
+            <div class="col-6">
+                <?php echo $row['carrera']; ?>
+            </div>
+             
+            <label class="col-6 ">Fecha de ingreso:</label>
+            <div class="col-6">
+                <?php echo $row['fecha']; ?>
+            </div>
+            
+            <label class="col-6 ">Imagen:</label>
+            <div class="col-6">
+                <?php $new = 2 ?>
+                <img src="vista.php?id=<?php echo $row['id']; ?>" width="300" height="300"/> 
+            </div>
+            
+        </div> 
     </div>
-    
+    <?php
+                }
+    ?>
+ </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
     <link href="css_mensajes/mensaje4.css" rel="stylesheet" >
-    
     <!--JS-->
     <title>contenido de convenios</title>
   </head>
@@ -34,12 +33,12 @@
                             <i class="fas fa-thumbs-down"></i>
                             </div>
                             <div class="dbox__body">
-                            <span class="dbox__count">LAS CONTRASEÑAS NO COINCIDEN</span>
-                            <span class="dbox__title">POR FAVOR VERIFICA QUE SEAN IGUALES</span>
+                            <span class="dbox__count">NO EXISTEN DATOS EN ESE RANGO DE FECHAS</span>
+                            <span class="dbox__title">NO HUBO INGRESOS EN ESAS FECHAS</span>
                         </div>
-                        
+                        <a href="javascript:history.go(-1)"class="dbox__action__btn" role="button"> Volver Atrás</a>
                             
-                            <a href="javascript:history.go(-1)"class="dbox__action__btn" role="button"> Volver Atrás</a>
+                            
                         			
                     </div>
                 </div>

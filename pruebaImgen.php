@@ -18,34 +18,35 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link href="css_mensajes/mensaje4.css" rel="stylesheet" >
     
-    <!--JS-->
+    
+    <script language="JavaScript" type="text/javascript" src="js/custom.js"></script>
     <title>contenido de convenios</title>
   </head>
   <body>
-      
-    <div class="container" style="margin-top:100px;">
-            <form role="form">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-5">
-                        <div class="dbox dbox--color-1">
-                            <div class="dbox__icon">
-                            <i class="fas fa-thumbs-down"></i>
-                            </div>
-                            <div class="dbox__body">
-                            <span class="dbox__count">LAS CONTRASEÑAS NO COINCIDEN</span>
-                            <span class="dbox__title">POR FAVOR VERIFICA QUE SEAN IGUALES</span>
-                        </div>
-                        
-                            
-                            <a href="javascript:history.go(-1)"class="dbox__action__btn" role="button"> Volver Atrás</a>
-                        			
-                    </div>
-                </div>
-            </form>
-    </div>
-    
+    <form name="MiForm" id="MiForm" method="post" action="guardarImagen.php" enctype="multipart/form-data">
+        <h4 class="text-center">Seleccione imagen a cargar</h4>
+        <div class="form-group">
+            <label class="col-6 col-form-label text-center">Nombre:</label>
+            <div class="col-6">
+                <input type="text" name="nombre" class="form-control input-lg" required/>
+            </div> 
+            <label class="col-6 col-form-label text-center">Carrera:</label>
+            <div class="col-6">
+                <input type="text" name="carrera" class="form-control input-lg"  required/>
+            </div> 
+            <label class="col-6 col-form-label">Fecha de ingreso:</label>
+            <div class="col-6">
+                <input class="form-control" name="fecha" type="date" value="2019-12-02" id="fecha-firma">
+            </div> 
+          <label class="col-sm-2 control-label">Archivos</label>
+          <div class="col-sm-8">
+            <input type="file" class="form-control" name="image" multiple required>
+          </div>
+          <button name="submit" class="btn btn-primary">Cargar Imagen</button>
+        </div>
+    </form>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

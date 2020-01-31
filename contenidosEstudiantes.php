@@ -162,7 +162,7 @@
                                       <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
                                     </div>
                                     <div class="col-md-5"> <!--DESCRIPCION-->
-                                      <div style="font-size: 5mm; "><?php echo $rowresultContinente22['descripcion']; ?></div>
+                                      <div style="font-size: 5mm; "><?php echo nl2br($rowresultContinente22['descripcion']); ?></div>
                                     </div>
                                     <div class="col-md-1">
                                       <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>

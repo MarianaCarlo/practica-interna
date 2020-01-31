@@ -345,6 +345,7 @@
                                 <div class="col-6">
                                     <textarea style="padding-left: 70px;" name="enlaces_de_interes" class="form-control" rows="3" placeholder=" www.pagina.com" required></textarea>
                                 </div>
+                                
                                 <!--VA DIRIGIDO A -->
                                 <label class="col-7 col-form-label"><div style="margin-left:-100px;">Va dirigido a:</div> </label>
                                 <div class="col-5">
@@ -638,7 +639,7 @@
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['pais']; ?></td>
                 <td>
-                  <a href="editUniversidad.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:#FE4164; color: black;" role="button">Editar</a>
+                  <a href="editarUniversidad.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:#FE4164; color: black;" role="button">Editar</a>
                   <a href="delete.php?id=<?php echo $row['id_universidad']; ?>" class="btn" style="background:black; color: white;" role="button">Eliminar</a>
                 </td>
             </tr>
@@ -714,7 +715,7 @@
                                       <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x" style="color:black;"></i><i  style="color:#F5FFFA;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
                                     </div>
                                     <div class="col-md-5"> <!--DESCRIPCION-->
-                                      <div style="font-size: 5mm; "><?php echo $rowresultContinente22['descripcion']; ?></div>
+                                      <div style="font-size: 5mm; "><?php echo nl2br($rowresultContinente22['descripcion']); ?></div>
                                     </div>
                                     <div class="col-md-1">
                                       <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>

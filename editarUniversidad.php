@@ -125,21 +125,29 @@
                                         <div class="col-md-1">
                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black; margin-top: 25px;"></i><i style="color:#F5FFFA; margin-top: 25px;" class="fas fa-sticky-note fa-stack-1x fa-inverse"></i></span>
                                         </div>
-                                        <div class="col-md-5"> <!--fecha descripcion-->
+                                        <div class="col-md-5"> <!-- descripcion-->
                                             <textarea id="orangeForm-name2" class="form-control" rows="4" style="margin-top:10px; color:black;" name="desc"><?php echo $row['descripcion'] ?></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 </br>
                                 <!--CUARTA LINEA-->
-                                <label style="color:white;">Programas:</label><label style="margin-left:480px;color:white;">Enlaces:</label>
+                                
+                                <label style="color:white;">Enlaces:</label><label style="margin-left:500px;color:white;">Programas:</label>
                                 <div class="md-form w-100">
                                     <div class="row">
+                                        <div class="col-md-1">
+                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
+                                        </div>
+                                        <div class="col-md-5"> <!--nombre-->
+                                            <input type="text" id="orangeForm-name2" class="form-control" style="margin-top:10px; color:black;" name="link" value="<?php echo $row['enlace_de_interes'] ?>">
+                                        </div>
+
                                         <div class="col-md-1">
                                             <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i  style="color:#F5FFFA;" class="fas fa-tasks fa-stack-1x fa-inverse"></i></span>
                                         </div>
                                         <div class="col-md-5"> <!--fecha programas-->
-                                            <input type="text" id="orangeForm-name2" class="form-control"style="margin-top:10px; color:black;" name="programas" value="<?php echo $row['programas'] ?>" readonly required></input>
+                                            <input type="text" id="orangeForm-name2" class="form-control"style="margin-top:10px; color:black;" value="<?php echo $row['programas'] ?>" readonly required></input>
                                             <select id="example" name="programas[]" multiple="multiple">
                                                 <?php
                                                     $query1111 = "SELECT * FROM programas";
@@ -163,12 +171,7 @@
                                             </script>
                                         </div>
                                         
-                                        <div class="col-md-1">
-                                            <span class="fa-stack fa-2x" ><i class="fas fa-circle fa-stack-2x" style="color:black"></i><i style="color:#F5FFFA;" class="fas fa-link fa-stack-1x fa-inverse"></i></span>
-                                        </div>
-                                        <div class="col-md-5"> <!--nombre-->
-                                            <input type="text" id="orangeForm-name2" class="form-control" style="margin-top:10px; color:black;" name="link" value="<?php echo $row['nombre'] ?>">
-                                        </div>
+                                        
                                     </div>
                                 </div>
 
